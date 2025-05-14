@@ -27,7 +27,7 @@ const Navbar = () => {
           href="#"
           className="text-xl md:text-2xl font-bold tracking-wider neon-text"
         >
-          BRET<span className="text-cyber-neon"> BERNHOFT</span>
+          Bret<span className="text-cyber-neon"> Bernhoft</span>
         </a>
 
         {/* Desktop Navigation */}

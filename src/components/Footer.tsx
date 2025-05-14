@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="text-xl font-bold tracking-wider neon-text">
-              BRET<span className="text-cyber-neon"> BERNHOFT</span>
+              Bret<span className="text-cyber-neon"> Bernhoft</span>
             </a>
             <p className="text-white/60 text-sm mt-2">
               Empowering ideas through code, one project at a time.

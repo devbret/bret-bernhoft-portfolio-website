@@ -26,7 +26,7 @@ const AboutSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/20 to-cyber-blue/10"></div>
                 <img
                   src="https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/5a3517f9-fee3-4763-93ff-238c315bb034.jpeg"
-                  alt="Developer Portrait"
+                  alt="Engineer Portrait"
                   className="w-full h-full object-cover"
                 />
               </div>

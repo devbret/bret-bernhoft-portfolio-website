@@ -8,11 +8,12 @@ const skillCategories = [
     title: "Frontend Development",
     icon: Globe,
     skills: [
-      { name: "React / React Native", level: 90 },
-      { name: "TypeScript / JavaScript", level: 95 },
-      { name: "HTML / CSS / SASS", level: 85 },
-      { name: "Redux / Context API", level: 80 },
-      { name: "Next.js", level: 75 },
+      { name: "React", level: 90 },
+      { name: "Vue.js", level: 75 },
+      { name: "Three.js", level: 85 },
+      { name: "D3.js", level: 90 },
+      { name: "Vite", level: 75 },
+      { name: "AngularJS", level: 80 },
     ],
   },
   {
@@ -20,35 +21,38 @@ const skillCategories = [
     title: "Backend Development",
     icon: Database,
     skills: [
-      { name: "Node.js / Express", level: 85 },
-      { name: "MongoDB / Mongoose", level: 80 },
-      { name: "SQL / PostgreSQL", level: 75 },
-      { name: "RESTful APIs", level: 90 },
-      { name: "GraphQL", level: 70 },
+      { name: "Node.js", level: 85 },
+      { name: "Express.js", level: 80 },
+      { name: "MySQL", level: 75 },
+      { name: "REST APIs", level: 90 },
+      { name: "Flask (Python)", level: 70 },
+      { name: "MongoDB", level: 70 },
     ],
   },
   {
     id: "tools",
-    title: "DevOps & Tools",
+    title: "DevOps And Tools",
     icon: Zap,
     skills: [
       { name: "Git / GitHub", level: 90 },
-      { name: "Docker / Kubernetes", level: 65 },
+      { name: "Docker / Kubernetes", level: 85 },
       { name: "CI/CD Pipelines", level: 70 },
-      { name: "AWS / Cloud Services", level: 75 },
-      { name: "Testing (Jest, Cypress)", level: 80 },
+      { name: "AWS / AI", level: 95 },
+      { name: "Proxmox / Linux Administration", level: 80 },
+      { name: "Pi-hole / OPNsense", level: 80 },
     ],
   },
   {
     id: "languages",
-    title: "Languages & Frameworks",
+    title: "Languages",
     icon: Code,
     skills: [
       { name: "JavaScript / TypeScript", level: 95 },
       { name: "Python", level: 80 },
-      { name: "Java", level: 65 },
-      { name: "C#", level: 60 },
-      { name: "PHP", level: 70 },
+      { name: "PHP", level: 65 },
+      { name: "Ruby", level: 60 },
+      { name: "Bash", level: 70 },
+      { name: "HTML / CSS", level: 90 },
     ],
   },
 ];
@@ -70,9 +74,9 @@ const SkillsSection = () => {
             Technical Expertise
           </h3>
           <p className="text-white/70 max-w-2xl mx-auto">
-            As a full stack software engineer, I honed my skills across various
-            technologies and frameworks, allowing me to build complete, scalable
-            applications from front to back.
+            As a full stack software engineer, I have honed my skills across
+            various technologies and frameworks, allowing me to build complete,
+            scalable applications from front to back.
           </p>
         </div>
 
