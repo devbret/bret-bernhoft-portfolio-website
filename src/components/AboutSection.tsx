@@ -18,14 +18,14 @@ const AboutSection = () => {
               ABOUT ME
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Passionate Full Stack Developer
+              Passionate Full Stack Software Engineer
             </h3>
 
             <div className="relative mt-8 mb-6 hidden lg:block">
               <div className="w-64 h-64 border-2 border-cyber-neon/50 rounded-lg overflow-hidden cyber-border">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/20 to-cyber-blue/10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  src="https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/5a3517f9-fee3-4763-93ff-238c315bb034.jpeg"
                   alt="Developer Portrait"
                   className="w-full h-full object-cover"
                 />
@@ -38,26 +38,23 @@ const AboutSection = () => {
           <div className="lg:col-span-3">
             <div className="space-y-6 text-white/80">
               <p className="text-lg leading-relaxed">
-                Hi there! I'm a dedicated full stack developer with a passion
-                for creating immersive digital experiences. With expertise in
-                both frontend and backend technologies, I build scalable,
-                responsive, and user-friendly applications.
+                I am a Full Stack Software Engineer committed to learning about
+                and building tools for making the internet more interesting and
+                secure.
               </p>
 
               <p className="leading-relaxed">
-                My journey in software development started over 5 years ago, and
-                since then, I've worked on various projects ranging from
-                e-commerce platforms to real-time communication systems. I pride
-                myself on staying updated with the latest technologies and best
-                practices.
+                I started my journey in technology via WordPress and digital
+                communications, working with analytics, media and
+                community-driven platforms. More recently I have been developing
+                OSINT tools, dashboards for cybersecurity insights and scalable
+                data applications using Python, React, TypeScript and SQL.
               </p>
 
               <p className="leading-relaxed">
-                What drives me is the opportunity to solve complex problems with
-                elegant solutions. I believe in clean code, thorough testing,
-                and continuous learning. When I'm not coding, you can find me
-                exploring new tech, contributing to open-source projects, or
-                sharing knowledge through mentoring.
+                I am particularly excited about the intersection of
+                intelligence, automation and user experience. As a result I have
+                set out to become a Senior Artificial Intelligence Engineer.
               </p>
 
               <div className="pt-6 border-t border-white/10">

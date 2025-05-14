@@ -27,7 +27,7 @@ const Navbar = () => {
           href="#"
           className="text-xl md:text-2xl font-bold tracking-wider neon-text"
         >
-          CYBER<span className="text-cyber-neon">DEV</span>
+          BRET<span className="text-cyber-neon"> BERNHOFT</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-3 ml-3">
             <a
-              href="https://github.com"
+              href="https://github.com/devbret"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -52,7 +52,7 @@ const Navbar = () => {
                 <Github className="h-5 w-5" />
               </Button>
             </a>
-            <a href="mailto:contact@example.com" aria-label="Email">
+            <a href="mailto:contact@bretbernhoft.com" aria-label="Email">
               <Button
                 variant="ghost"
                 size="icon"

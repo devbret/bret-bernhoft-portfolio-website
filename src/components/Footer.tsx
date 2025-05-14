@@ -9,54 +9,21 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="text-xl font-bold tracking-wider neon-text">
-              CYBER<span className="text-cyber-neon">DEV</span>
+              BRET<span className="text-cyber-neon"> BERNHOFT</span>
             </a>
             <p className="text-white/60 text-sm mt-2">
-              Building the digital future, one line of code at a time.
+              Empowering ideas through code, one project at a time.
             </p>
-          </div>
-
-          <div className="flex space-x-4">
-            <SocialLink
-              href="https://github.com"
-              icon={Github}
-              label="GitHub"
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              icon={Linkedin}
-              label="LinkedIn"
-            />
-            <SocialLink
-              href="https://twitter.com"
-              icon={Twitter}
-              label="Twitter"
-            />
-            <SocialLink
-              href="mailto:contact@example.com"
-              icon={Mail}
-              label="Email"
-            />
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 pt-8 border-t border-white/10 text-sm text-white/60">
           <div className="mb-4 md:mb-0 flex items-center">
             <Code className="w-4 h-4 mr-2" />
-            <span>© {currentYear} Portfolio. All rights reserved.</span>
+            <span>© {currentYear} Bret Bernhoft. All rights reserved.</span>
           </div>
 
-          <div className="flex space-x-6">
-            <a href="#" className="hover:text-cyber-neon transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-cyber-neon transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-cyber-neon transition-colors">
-              Sitemap
-            </a>
-          </div>
+          <div className="flex space-x-6"></div>
         </div>
       </div>
     </footer>

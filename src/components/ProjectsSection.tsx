@@ -6,64 +6,62 @@ import { Badge } from "@/components/ui/badge";
 const projects = [
   {
     id: 1,
-    title: "CyberConnect Social Platform",
+    title: "Mapping A Website's Internal Links",
     description:
-      "A feature-rich social networking platform with real-time messaging, user profiles, and content sharing capabilities.",
+      "Use Python to explore a website's internal links. Then apply D3 to visualize those connections as an interactive network graph with scorecards.",
     image:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    tags: ["React", "Node.js", "MongoDB", "WebSockets"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: true,
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ad55b31e-edf3-4a21-a6a2-3e61f4d84a0b.jpg",
+    tags: [],
+    githubUrl: "https://github.com/devbret/website-internal-links",
+    liveUrl: "https://github.com/devbret/website-internal-links",
     category: "fullstack",
   },
   {
     id: 2,
-    title: "NeuroTech Dashboard",
+    title: "YouTube Playlists Tracker App",
     description:
-      "An advanced analytics dashboard with data visualization, real-time updates, and customizable widgets.",
+      "Catalog your viewing progress with specific YouTube playlists, organized by user-defined categories, via this app.",
     image:
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    tags: ["React", "D3.js", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    category: "frontend",
+      "https://hosting.photobucket.com/images/i/bernhoftbret/youtube-playlists-tracker-home-page.png",
+    tags: [],
+    githubUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
+    liveUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
+    category: "fullstack",
   },
   {
     id: 3,
-    title: "Quantum API Service",
+    title: "Detailed Audio Analyses And Visualizations",
     description:
-      "A scalable RESTful API service with comprehensive documentation, authentication, and rate limiting.",
+      "Measure the evolution of various audio features for any number of audio tracks. Then visualize that data.",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    tags: ["Node.js", "Express", "PostgreSQL", "Docker"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    category: "backend",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9b9a3c2a-87bb-416f-bc4a-953e594fea16.png",
+    tags: [],
+    githubUrl: "https://github.com/devbret/detailed-audio-analysis",
+    liveUrl: "https://github.com/devbret/detailed-audio-analysis",
+    category: "fullstack",
   },
   {
     id: 4,
-    title: "HoloSync Mobile App",
+    title: "Pi-hole Data Measurement Tools",
     description:
-      "A cross-platform mobile application for productivity and task management with cloud synchronization.",
+      "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    tags: ["React Native", "Redux", "Firebase", "Expo"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    category: "mobile",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/975f6680-240c-4507-8c73-eb3a1f2b80ba.jpg",
+    tags: [],
+    githubUrl: "https://github.com/devbret/pihole-data-measurement-tools",
+    liveUrl: "https://github.com/devbret/pihole-data-measurement-tools",
+    category: "fullstack",
   },
   {
     id: 5,
-    title: "DataSphere Analytics",
+    title: "Homelab Documentation",
     description:
-      "A big data processing and analytics platform with machine learning capabilities and interactive dashboards.",
+      "Documentation for a self-hosted Kubernetes homelab running Mistral-7B for local AI, with Pi-hole and TrueNAS and OPNsense for DevOps",
     image:
-      "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    tags: ["Python", "TensorFlow", "React", "AWS"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: true,
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/8f6260aa-3b69-430b-8253-4d5d280e92f6.png",
+    tags: [],
+    githubUrl: "https://github.com/devbret/homelab",
+    liveUrl: "https://github.com/devbret/homelab",
     category: "fullstack",
   },
 ];
@@ -71,9 +69,6 @@ const projects = [
 const filters = [
   { label: "All", value: "all" },
   { label: "Full Stack", value: "fullstack" },
-  { label: "Frontend", value: "frontend" },
-  { label: "Backend", value: "backend" },
-  { label: "Mobile", value: "mobile" },
 ];
 
 const ProjectsSection = () => {
@@ -101,8 +96,7 @@ const ProjectsSection = () => {
             </h3>
             <p className="text-white/70 max-w-2xl">
               Check out some of my recent full stack projects, showcasing
-              front-end design, back-end architecture, and everything in
-              between.
+              design, architecture and everything in between.
             </p>
           </div>
 
@@ -135,7 +129,6 @@ const ProjectsSection = () => {
               tags={project.tags}
               githubUrl={project.githubUrl}
               liveUrl={project.liveUrl}
-              featured={project.featured}
             />
           ))}
         </div>

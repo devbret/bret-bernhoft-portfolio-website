@@ -10,7 +10,7 @@ const HeroSection = () => {
       const el = textRef.current;
       if (!el) return;
 
-      const fullText = "I build full stack experiences";
+      const fullText = "I build full stack solutions";
       let currentText = "";
       let index = 0;
 
@@ -56,11 +56,11 @@ const HeroSection = () => {
       <div className="w-full max-w-5xl mx-auto z-20 space-y-6">
         <h2 className="text-cyber-neon font-mono text-xl md:text-2xl tracking-widest">
           <span className="inline-block w-16 h-[1px] bg-cyber-neon mr-3 align-middle"></span>
-          FULL STACK DEVELOPER
+          FULL STACK SOFTWARE ENGINEER
         </h2>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-4 leading-tight">
-          <span className="block">Coding the future</span>
+          <span className="block">Empowering ideas through code</span>
           <span className="text-cyber-purple neon-purple-text">
             one project at a time
           </span>
@@ -74,17 +74,21 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <Button className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border">
-            View Projects
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <a href="#projects">
+            <Button className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border">
+              View Projects
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
 
-          <Button
-            variant="outline"
-            className="relative border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all py-6 px-8"
-          >
-            Contact Me
-          </Button>
+          <a href="#contact">
+            <Button
+              variant="outline"
+              className="relative border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all py-6 px-8"
+            >
+              Contact Me
+            </Button>
+          </a>
         </div>
       </div>
 

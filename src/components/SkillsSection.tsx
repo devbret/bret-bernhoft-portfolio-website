@@ -70,7 +70,7 @@ const SkillsSection = () => {
             Technical Expertise
           </h3>
           <p className="text-white/70 max-w-2xl mx-auto">
-            As a full stack developer, I've honed my skills across various
+            As a full stack software engineer, I honed my skills across various
             technologies and frameworks, allowing me to build complete, scalable
             applications from front to back.
           </p>
