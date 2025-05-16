@@ -80,7 +80,6 @@ const ContactSection = () => {
               icon={MapPin}
               title="Location"
               value="Portland, OR, USA"
-              href="#"
             />
 
             <div className="p-6 bg-cyber-black/50 border border-white/10 rounded-lg mt-8">
@@ -112,26 +111,41 @@ const ContactItem = ({
   icon: React.ElementType;
   title: string;
   value: string;
-  href: string;
-}) => (
-  <a
-    href={href}
-    className="flex items-start group transition-all"
-    target={
-      href.startsWith("mailto:") || href.startsWith("tel:") ? "_self" : "_blank"
-    }
-    rel="noopener noreferrer"
-  >
-    <div className="p-3 bg-cyber-purple/10 rounded-md mr-4 group-hover:bg-cyber-purple/20 transition-all">
-      <Icon className="w-6 h-6 text-cyber-purple" />
+  href?: string;
+}) =>
+  href ? (
+    <a
+      href={href}
+      className="flex items-start group transition-all"
+      target={
+        href.startsWith("mailto:") || href.startsWith("tel:")
+          ? "_self"
+          : "_blank"
+      }
+      rel="noopener noreferrer"
+    >
+      <div className="p-3 bg-cyber-purple/10 rounded-md mr-4 group-hover:bg-cyber-purple/20 transition-all">
+        <Icon className="w-6 h-6 text-cyber-purple" />
+      </div>
+      <div>
+        <h4 className="text-sm font-medium text-white/70">{title}</h4>
+        <p className="font-semibold group-hover:text-cyber-neon transition-colors">
+          {value}
+        </p>
+      </div>
+    </a>
+  ) : (
+    <div className="flex items-center">
+      <div className="p-3 bg-cyber-purple/10 rounded-md mr-4 group-hover:bg-cyber-purple/20 transition-all">
+        <Icon className="w-6 h-6 text-cyber-purple" />
+      </div>
+      <div>
+        <h4 className="text-sm font-medium text-white/70">{title}</h4>
+        <p className="font-semibold group-hover:text-cyber-neon transition-colors">
+          {value}
+        </p>
+      </div>
     </div>
-    <div>
-      <h4 className="text-sm font-medium text-white/70">{title}</h4>
-      <p className="font-semibold group-hover:text-cyber-neon transition-colors">
-        {value}
-      </p>
-    </div>
-  </a>
-);
+  );
 
 export default ContactSection;
