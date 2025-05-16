@@ -14,7 +14,6 @@ const projects = [
     tags: [],
     githubUrl: "https://github.com/devbret/website-internal-links",
     liveUrl: "https://github.com/devbret/website-internal-links",
-    category: "fullstack",
   },
   {
     id: 2,
@@ -26,7 +25,6 @@ const projects = [
     tags: [],
     githubUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
     liveUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
-    category: "fullstack",
   },
   {
     id: 3,
@@ -38,7 +36,6 @@ const projects = [
     tags: [],
     githubUrl: "https://github.com/devbret/detailed-audio-analysis",
     liveUrl: "https://github.com/devbret/detailed-audio-analysis",
-    category: "fullstack",
   },
   {
     id: 4,
@@ -50,10 +47,20 @@ const projects = [
     tags: [],
     githubUrl: "https://github.com/devbret/pihole-data-measurement-tools",
     liveUrl: "https://github.com/devbret/pihole-data-measurement-tools",
-    category: "fullstack",
   },
   {
     id: 5,
+    title: "MCP9808 Sensor Project",
+    description:
+      "Code for combining a Raspberry Pi Zero 2 WH computer with an Adafruit MCP9808 temperature sensor to measure ambient air temperatures.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/083a8baa-9cbe-4435-9a2b-825bd9222ec2.jpg",
+    tags: [],
+    githubUrl: "https://github.com/devbret/mcp9808-sensor-project",
+    liveUrl: "https://github.com/devbret/mcp9808-sensor-project",
+  },
+  {
+    id: 6,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B for local AI, with Pi-hole and TrueNAS and OPNsense for DevOps.",
@@ -62,14 +69,44 @@ const projects = [
     tags: [],
     githubUrl: "https://github.com/devbret/homelab",
     liveUrl: "https://github.com/devbret/homelab",
-    category: "fullstack",
+  },
+  {
+    id: 7,
+    title: "GeoSpy API Mapping Application",
+    description:
+      "Query the GeoSpy API for any allowed number of images using Python. Then visualize that JSON data on a world map with D3.",
+    image:
+      "https://hosting.photobucket.com/images/i/bernhoftbret/geospy-api-mapping-app-histogram-update.png",
+    tags: [],
+    githubUrl: "https://github.com/devbret/geospy-api-mapping",
+    liveUrl: "https://github.com/devbret/geospy-api-mapping",
+  },
+  {
+    id: 8,
+    title: "OSINT Keyword Searches",
+    description:
+      "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/e72bbd40-7c45-4172-b046-d0bec18646d7.jpg",
+    tags: [],
+    githubUrl: "https://github.com/devbret/osint-keyword-searches",
+    liveUrl: "https://github.com/devbret/osint-keyword-searches",
+  },
+  {
+    id: 9,
+    title: "Username Availability Checker",
+    description:
+      "Check the availability of a username across twenty popular social media platforms.",
+    image:
+      "https://hosting.photobucket.com/images/i/bernhoftbret/usename-availability-checker-new-dropdown.png",
+    tags: [],
+    githubUrl: "https://github.com/devbret/username-availability-checker",
+    liveUrl: "https://github.com/devbret/username-availability-checker",
+    category: "",
   },
 ];
 
-const filters = [
-  { label: "All", value: "all" },
-  { label: "Full Stack", value: "fullstack" },
-];
+const filters = [];
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState("all");
