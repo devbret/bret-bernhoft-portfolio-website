@@ -38,7 +38,11 @@ const Navbar = () => {
           <NavLink href="#endorsements">Endorsements</NavLink>
           <NavLink href="#contact">Contact</NavLink>
 
-          <a href="Bret Bernhoft Resume.pdf" download className="ml-3">
+          <a
+            href="https://www.dropbox.com/scl/fi/4x34726kdipy2tr0xwo2i/Bret-Bernhoft-Resume.pdf?rlkey=8a59gu8jcpg3qmvfgzqxnd81k&st=sv7f4e0u&dl=0"
+            download
+            className="ml-3"
+          >
             <Button
               variant="outline"
               size="sm"
@@ -130,7 +134,11 @@ const Navbar = () => {
             Contact
           </a>
 
-          <a href="Bret Bernhoft Resume.pdf" download className="mt-4">
+          <a
+            href="https://www.dropbox.com/scl/fi/4x34726kdipy2tr0xwo2i/Bret-Bernhoft-Resume.pdf?rlkey=8a59gu8jcpg3qmvfgzqxnd81k&st=sv7f4e0u&dl=0"
+            download
+            className="mt-4"
+          >
             <Button
               variant="outline"
               size="sm"
