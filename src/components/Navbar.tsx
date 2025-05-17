@@ -41,6 +41,7 @@ const Navbar = () => {
           <a
             href="https://drive.google.com/file/d/1sstA5z0yiFTkrO8-187iMBQHnkrlkVCJ/view?usp=drive_link"
             download
+            target="_blank"
             className="ml-3"
           >
             <Button
@@ -138,6 +139,7 @@ const Navbar = () => {
             href="https://drive.google.com/file/d/1sstA5z0yiFTkrO8-187iMBQHnkrlkVCJ/view?usp=drive_link"
             download
             className="mt-4"
+            target="_blank"
           >
             <Button
               variant="outline"
