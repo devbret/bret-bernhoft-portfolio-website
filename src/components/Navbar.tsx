@@ -38,7 +38,7 @@ const Navbar = () => {
           <NavLink href="#endorsements">Endorsements</NavLink>
           <NavLink href="#contact">Contact</NavLink>
 
-          <a href="public/Bret Bernhoft Resume.pdf" download className="ml-3">
+          <a href="Bret Bernhoft Resume.pdf" download className="ml-3">
             <Button
               variant="outline"
               size="sm"
@@ -130,7 +130,7 @@ const Navbar = () => {
             Contact
           </a>
 
-          <a href="public/Bret Bernhoft Resume.pdf" download className="mt-4">
+          <a href="Bret Bernhoft Resume.pdf" download className="mt-4">
             <Button
               variant="outline"
               size="sm"
