@@ -37,6 +37,16 @@ const Navbar = () => {
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#contact">Contact</NavLink>
 
+          <a href="public/Bret Bernhoft Resume.pdf" download className="ml-3">
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-colors"
+            >
+              Download Resume
+            </Button>
+          </a>
+
           <div className="flex items-center gap-3 ml-3">
             <a
               href="https://github.com/devbret"
@@ -110,6 +120,16 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             Contact
+          </a>
+
+          <a href="public/Bret Bernhoft Resume.pdf" download className="mt-4">
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-colors"
+            >
+              Download Resume
+            </Button>
           </a>
 
           <div className="flex items-center gap-3 mt-4">
