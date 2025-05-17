@@ -35,6 +35,7 @@ const Navbar = () => {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#skills">Skills</NavLink>
+          <NavLink href="#endorsements">Endorsements</NavLink>
           <NavLink href="#contact">Contact</NavLink>
 
           <a href="public/Bret Bernhoft Resume.pdf" download className="ml-3">
@@ -113,6 +114,13 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             Skills
+          </a>
+          <a
+            href="#endorsements"
+            className="py-3 text-lg hover:text-cyber-neon transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Endorsements
           </a>
           <a
             href="#contact"

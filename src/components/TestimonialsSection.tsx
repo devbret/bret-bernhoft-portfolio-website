@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
       : testimonials.filter((t) => t.tag === activeFilter);
 
   return (
-    <section id="testimonials" className="py-20 px-4 cyber-bg relative">
+    <section id="endorsements" className="py-20 px-4 cyber-bg relative">
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
