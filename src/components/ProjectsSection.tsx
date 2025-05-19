@@ -39,6 +39,17 @@ const projects = [
   },
   {
     id: 4,
+    title: "Browser Automation Experiments",
+    description:
+      " Scripts designed to test, analyze and interact with websites automatically, thus helping improve performance, accessibility and reliability. ",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ae3971c6-ed8d-4d08-90c0-879edcb15b1a.png",
+    tags: [],
+    githubUrl: "https://github.com/devbret/browser-automation-experiments",
+    liveUrl: "https://github.com/devbret/browser-automation-experiments",
+  },
+  {
+    id: 5,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -49,7 +60,7 @@ const projects = [
     liveUrl: "https://github.com/devbret/pihole-data-measurement-tools",
   },
   {
-    id: 5,
+    id: 6,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a Raspberry Pi Zero 2 WH computer with an Adafruit MCP9808 temperature sensor to measure ambient air temperatures.",
@@ -60,7 +71,7 @@ const projects = [
     liveUrl: "https://github.com/devbret/mcp9808-sensor-project",
   },
   {
-    id: 6,
+    id: 7,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B for local AI, with Pi-hole and TrueNAS and OPNsense for DevOps.",
@@ -71,7 +82,7 @@ const projects = [
     liveUrl: "https://github.com/devbret/homelab",
   },
   {
-    id: 7,
+    id: 8,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for any allowed number of images using Python. Then visualize that JSON data on a world map with D3.",
@@ -82,7 +93,7 @@ const projects = [
     liveUrl: "https://github.com/devbret/geospy-api-mapping",
   },
   {
-    id: 8,
+    id: 9,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -93,7 +104,7 @@ const projects = [
     liveUrl: "https://github.com/devbret/osint-keyword-searches",
   },
   {
-    id: 9,
+    id: 10,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
