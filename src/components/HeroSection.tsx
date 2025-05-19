@@ -35,12 +35,12 @@ const HeroSection = () => {
       className="min-h-screen relative flex flex-col justify-center items-start px-4 lg:px-24 py-24 overflow-hidden cyber-bg"
       id="home"
     >
-      {/* Background elements */}
+      {/* Background Elements */}
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
 
-      {/* Animated scanline effect */}
+      {/* Animated Scanline Effect */}
       <div className="absolute inset-0 pointer-events-none z-10">
         <div
           className="absolute inset-x-0 h-px bg-cyber-neon/20"
@@ -92,7 +92,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20">
         <span className="text-white/50 text-sm mb-2">Scroll Down</span>
         <div className="w-px h-10 bg-gradient-to-b from-cyber-neon/80 to-transparent"></div>

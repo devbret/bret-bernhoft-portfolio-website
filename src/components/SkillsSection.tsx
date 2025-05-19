@@ -1,7 +1,7 @@
 import { Code, Database, Globe, Zap } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
-// Skill categories with their respective skills and levels
+// Skill Categories And Scores
 const skillCategories = [
   {
     id: "frontend",
@@ -60,7 +60,7 @@ const skillCategories = [
 const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 px-4 cyber-bg relative">
-      {/* Background elements */}
+      {/* Background Elements */}
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
@@ -80,14 +80,14 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        {/* Skills grid */}
+        {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {skillCategories.map((category) => (
             <div
               key={category.id}
               className="bg-cyber-black/40 border border-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8 relative group overflow-hidden transition-all hover:border-cyber-neon/30"
             >
-              {/* Corner accents */}
+              {/* Corner Accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyber-neon opacity-70"></div>
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyber-pink opacity-70"></div>
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cyber-orange opacity-70"></div>

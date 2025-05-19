@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-
 type Testimonial = {
   id: number;
   name: string;
@@ -18,7 +15,7 @@ const testimonials: Testimonial[] = [
     quote:
       "Bret is a very capable engineer with a natural curiosity and wide range of technological interests that inform his problem solving skills. [...] Bret is a considerate and helpful team member who I regard with utmost respect.",
     avatarUrl: "",
-    tag: "Mentorship",
+    tag: "Software Engineering",
   },
   {
     id: 2,
@@ -38,18 +35,27 @@ const testimonials: Testimonial[] = [
     avatarUrl: "",
     tag: "Open Source Intelligence",
   },
+  {
+    id: 4,
+    name: "Jacob Beauchamp",
+    role: "Software Engineer",
+    quote:
+      "Bret has a real, demonstrated passion for software engineering. [...] Through his publications and commitment to genuine interests in forward-looking technologies like AI and data analytics, it's clear that he'd be a great candidate for a software engineering role in today's market onward.",
+    avatarUrl: "",
+    tag: "Software Engineering",
+  },
+  {
+    id: 5,
+    name: "John Bailey",
+    role: "Cybersecurity Analyst",
+    quote:
+      "Bret is an excellent communicator and a true professional. He has always been willing to support me on my journey, demonstrating patience, expertise, and a strong commitment to helping both me and the broader tech community.",
+    avatarUrl: "",
+    tag: "Cybersecurity",
+  },
 ];
 
-const filters = [];
-
 const TestimonialsSection = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
-
-  const filteredTestimonials =
-    activeFilter === "all"
-      ? testimonials
-      : testimonials.filter((t) => t.tag === activeFilter);
-
   return (
     <section id="endorsements" className="py-20 px-4 cyber-bg relative">
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
@@ -69,51 +75,35 @@ const TestimonialsSection = () => {
               alongside me.
             </p>
           </div>
-
-          {/* Filter buttons (optional future use) */}
-          <div className="flex flex-wrap gap-2 mt-6 md:mt-0">
-            {filters.map((filter) => (
-              <Badge
-                key={filter.value}
-                className={`cursor-pointer px-4 py-2 text-sm transition-all ${
-                  activeFilter === filter.value
-                    ? "bg-cyber-neon text-cyber-black"
-                    : "bg-transparent border border-white/20 text-white/70 hover:border-cyber-neon hover:text-cyber-neon"
-                }`}
-                onClick={() => setActiveFilter(filter.value)}
-              >
-                {filter.label}
-              </Badge>
-            ))}
-          </div>
         </div>
 
         {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {filteredTestimonials.map((t) => (
-            <div
-              key={t.id}
-              className="bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                {t.avatarUrl && (
-                  <img
-                    src={t.avatarUrl}
-                    alt={t.name}
-                    className="w-12 h-12 rounded-full border border-white/20"
-                  />
-                )}
-                <div>
-                  <h4 className="text-lg font-semibold text-white">{t.name}</h4>
-                  <p className="text-sm text-white/60">{t.role}</p>
+        <div className="flex flex-wrap justify-center -mx-2">
+          {testimonials.map((t) => (
+            <div key={t.id} className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-6">
+              <div className="h-full bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+                <div className="flex items-center gap-4 mb-4">
+                  {t.avatarUrl && (
+                    <img
+                      src={t.avatarUrl}
+                      alt={t.name}
+                      className="w-12 h-12 rounded-full border border-white/20"
+                    />
+                  )}
+                  <div>
+                    <h4 className="text-lg font-semibold text-white">
+                      {t.name}
+                    </h4>
+                    <p className="text-sm text-white/60">{t.role}</p>
+                  </div>
                 </div>
+                <p className="text-white/80 italic">“{t.quote}”</p>
               </div>
-              <p className="text-white/80 italic">“{t.quote}”</p>
             </div>
           ))}
         </div>
 
-        {filteredTestimonials.length === 0 && (
+        {testimonials.length === 0 && (
           <div className="text-center py-20">
             <p className="text-white/70 text-lg">
               No testimonials found for this filter.

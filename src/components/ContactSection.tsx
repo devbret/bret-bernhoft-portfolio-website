@@ -1,47 +1,6 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Send, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // In a real application, you would send the form data to your backend
-    console.log("Form Data:", formData);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      // Reset form after submission
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      alert("Thank you for your message! I will get back to you soon.");
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="py-20 px-4 cyber-bg relative">
       {/* Background elements */}
@@ -79,7 +38,7 @@ const ContactSection = () => {
             <ContactItem
               icon={MapPin}
               title="Location"
-              value="Portland, OR, USA"
+              value="Vancouver, WA, USA"
             />
 
             <div className="p-6 bg-cyber-black/50 border border-white/10 rounded-lg mt-8">

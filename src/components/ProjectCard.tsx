@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  tags: string[];
   githubUrl?: string;
   liveUrl?: string;
   featured?: boolean;
@@ -16,7 +14,6 @@ const ProjectCard = ({
   title,
   description,
   image,
-  tags,
   githubUrl,
   liveUrl,
   featured = false,
@@ -31,10 +28,10 @@ const ProjectCard = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Overlay and border effect */}
+      {/* Overlay And Border Effect */}
       <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 transition-all duration-500 z-20 cyber-border opacity-0 group-hover:opacity-100"></div>
 
-      {/* Background image */}
+      {/* Background Image */}
       <div className="relative h-64 md:h-72 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center transform transition-transform duration-700 scale-105 group-hover:scale-100"
@@ -49,28 +46,6 @@ const ProjectCard = ({
           isHovered ? "translate-y-0" : "translate-y-16"
         }`}
       >
-        {/* Featured badge */}
-        {featured && (
-          <div className="absolute top-4 left-4">
-            <Badge className="bg-cyber-neon text-cyber-black font-medium px-3 py-1">
-              Featured Project
-            </Badge>
-          </div>
-        )}
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-          {tags.map((tag, index) => (
-            <Badge
-              key={index}
-              variant="outline"
-              className="border-cyber-purple/60 text-cyber-purple font-mono text-xs"
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
-
         {/* Title and description */}
         <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:text-cyber-neon transition-colors">
           {title}

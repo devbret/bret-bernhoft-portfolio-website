@@ -1,4 +1,4 @@
-import { Github, Mail, Linkedin, Twitter, Code } from "lucide-react";
+import { Code } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,25 +29,5 @@ const Footer = () => {
     </footer>
   );
 };
-
-const SocialLink = ({
-  href,
-  icon: Icon,
-  label,
-}: {
-  href: string;
-  icon: React.ElementType;
-  label: string;
-}) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-white/5 hover:bg-white/10 p-3 rounded-full transition-all hover:text-cyber-neon"
-    aria-label={label}
-  >
-    <Icon className="w-5 h-5" />
-  </a>
-);
 
 export default Footer;

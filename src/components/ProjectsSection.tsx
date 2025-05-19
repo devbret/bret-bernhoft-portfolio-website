@@ -1,8 +1,6 @@
-import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { Badge } from "@/components/ui/badge";
 
-// Sample project data
+// Project Data
 const projects = [
   {
     id: 1,
@@ -117,19 +115,10 @@ const projects = [
   },
 ];
 
-const filters = [];
-
 const ProjectsSection = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
-
-  const filteredProjects =
-    activeFilter === "all"
-      ? projects
-      : projects.filter((project) => project.category === activeFilter);
-
   return (
     <section id="projects" className="py-20 px-4 cyber-bg relative">
-      {/* Background elements */}
+      {/* Background Elements */}
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
@@ -147,48 +136,21 @@ const ProjectsSection = () => {
               design, architecture and everything in between.
             </p>
           </div>
-
-          {/* Filter buttons */}
-          <div className="flex flex-wrap gap-2 mt-6 md:mt-0">
-            {filters.map((filter) => (
-              <Badge
-                key={filter.value}
-                className={`cursor-pointer px-4 py-2 text-sm transition-all ${
-                  activeFilter === filter.value
-                    ? "bg-cyber-neon text-cyber-black"
-                    : "bg-transparent border border-white/20 text-white/70 hover:border-cyber-neon hover:text-cyber-neon"
-                }`}
-                onClick={() => setActiveFilter(filter.value)}
-              >
-                {filter.label}
-              </Badge>
-            ))}
-          </div>
         </div>
 
-        {/* Projects grid */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}
               description={project.description}
               image={project.image}
-              tags={project.tags}
               githubUrl={project.githubUrl}
               liveUrl={project.liveUrl}
             />
           ))}
         </div>
-
-        {/* Empty state */}
-        {filteredProjects.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-white/70 text-lg">
-              No projects found for this filter.
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );

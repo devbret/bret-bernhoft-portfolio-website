@@ -6,12 +6,12 @@ const AboutSection = () => {
       id="about"
       className="py-20 px-4 cyber-bg relative overflow-hidden"
     >
-      {/* Background elements */}
+      {/* Background Elements */}
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Left column */}
+          {/* Left Column */}
           <div className="lg:col-span-2 flex flex-col justify-center">
             <h2 className="text-cyber-neon font-mono text-lg tracking-widest mb-2">
               <span className="inline-block w-10 h-[1px] bg-cyber-neon mr-3 align-middle"></span>
@@ -34,7 +34,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right column */}
+          {/* Right Column */}
           <div className="lg:col-span-3">
             <div className="space-y-6 text-white/80">
               <p className="text-lg leading-relaxed">
@@ -86,7 +86,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll Indicator */}
         <div className="flex justify-center mt-16">
           <a
             href="#projects"

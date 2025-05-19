@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Github, Mail, Menu, X } from "lucide-react";
+import { Github, Mail, Menu, X, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -54,6 +54,21 @@ const Navbar = () => {
           </a>
 
           <div className="flex items-center gap-3 ml-3">
+            <a
+              href="https://www.linkedin.com/in/bernhoftbret/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-cyber-neon transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+
             <a
               href="https://github.com/devbret"
               target="_blank"
@@ -151,6 +166,21 @@ const Navbar = () => {
           </a>
 
           <div className="flex items-center gap-3 mt-4">
+            <a
+              href="https://www.linkedin.com/in/bernhoftbret/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:text-cyber-neon transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+
             <a
               href="https://github.com"
               target="_blank"
