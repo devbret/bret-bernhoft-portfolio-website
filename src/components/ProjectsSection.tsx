@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Mapping A Website's Internal Links",
     description:
-      "Use Python to explore a website's internal links. Then apply D3 to visualize those connections as an interactive network graph with scorecards.",
+      "Explore a website's internal links, then visualize those connections as a network graph with scorecards and analysis using Claude AI.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ad55b31e-edf3-4a21-a6a2-3e61f4d84a0b.jpg",
     tags: [],
