@@ -10,7 +10,8 @@ const HeroSection = () => {
       const el = textRef.current;
       if (!el) return;
 
-      const fullText = "I build full stack solutions";
+      const fullText =
+        "I build full stack solutions that simplify operations and save time.";
       let currentText = "";
       let index = 0;
 
@@ -60,9 +61,9 @@ const HeroSection = () => {
         </h2>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-4 leading-tight">
-          <span className="block">Empowering ideas through code</span>
+          <span className="block">Empowering businesses</span>
           <span className="text-cyber-purple neon-purple-text">
-            one project at a time
+            through automation and integration
           </span>
         </h1>
 
