@@ -38,23 +38,30 @@ const AboutSection = () => {
           <div className="lg:col-span-3">
             <div className="space-y-6 text-white/80">
               <p className="text-lg leading-relaxed">
-                I am a Full Stack Software Engineer committed to learning about
-                and building tools for making the internet more interesting and
-                secure.
+                I am a Full Stack Software Engineer focused on building
+                automation-first tools that simplify operations, reduce friction
+                and unlock smarter workflows.
               </p>
 
               <p className="leading-relaxed">
-                I started my journey in technology via WordPress and digital
-                communications, working with analytics, media and
-                community-driven platforms. More recently I have been developing
-                OSINT tools, dashboards for cybersecurity insights and scalable
-                data applications using Python, React, TypeScript and SQL.
+                My journey began in WordPress and digital communications, where
+                I gained hands-on experience with analytics, content systems and
+                community platforms. That foundation evolved into full stack
+                development across a range of industries.
               </p>
 
               <p className="leading-relaxed">
-                I am particularly excited about the intersection of
-                intelligence, automation and user experience. As a result I have
-                set out to become a Senior Artificial Intelligence Engineer.
+                Today, I specialize in creating custom solutions using
+                Quickbase, Zapier, REST and GraphQL APIs, Python, React and SQL.
+                I am passionate about streamlining repetitive work, connecting
+                systems and building high-impact tools.
+              </p>
+
+              <p className="leading-relaxed">
+                I am especially drawn to the intersection of automation,
+                intelligence and user experience. And am actively advancing
+                toward a role as a Senior AI Engineer where I can apply these
+                principles at scale.
               </p>
 
               <div className="pt-6 border-t border-white/10">

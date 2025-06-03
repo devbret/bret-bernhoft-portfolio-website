@@ -39,7 +39,7 @@ const Navbar = () => {
           <NavLink href="#contact">Contact</NavLink>
 
           <a
-            href="https://drive.google.com/file/d/1sstA5z0yiFTkrO8-187iMBQHnkrlkVCJ/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1BIht-54AmknZActu1ORQzctF1Nr8mohH/view"
             download
             target="_blank"
             className="ml-3"
@@ -151,7 +151,7 @@ const Navbar = () => {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1sstA5z0yiFTkrO8-187iMBQHnkrlkVCJ/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1BIht-54AmknZActu1ORQzctF1Nr8mohH/view"
             download
             className="mt-4"
             target="_blank"
