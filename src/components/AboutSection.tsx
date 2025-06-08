@@ -51,7 +51,7 @@ const AboutSection = () => {
                 production-grade Quickbase applications used by multi-state
                 field teams, engineered API integrations across cloud services
                 like AWS, Trello and Zapier and delivered automation workflows
-                that cut operational overhead by over 50%. My work consistently
+                that cut operational overhead by over 20%. My work consistently
                 emphasizes collaboration, user-centric interfaces and real-time
                 reporting to empower decision-makers and ground teams alike.
               </p>
