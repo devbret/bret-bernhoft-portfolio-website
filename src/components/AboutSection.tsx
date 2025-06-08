@@ -38,38 +38,40 @@ const AboutSection = () => {
           <div className="lg:col-span-3">
             <div className="space-y-6 text-white/80">
               <p className="text-lg leading-relaxed">
-                I am a Full Stack Software Engineer with a growing
-                specialization in low-code and Quickbase application
-                development. My career began in WordPress and digital media,
-                where I learned how users interact with content across
-                platforms.
+                I am a Full Stack Software Engineer specializing in low-code
+                development, with a strong focus on building secure, scalable
+                applications using Quickbase and cloud-integrated automation
+                platforms. My background spans from WordPress deployments to
+                business systems, giving me a unique perspective on how people
+                interact with technology at scale.
               </p>
 
               <p className="leading-relaxed">
-                Today, I design and deploy secure, data-driven systems that
-                blend automation, intelligence and usability. My recent work
-                includes building production-grade Quickbase apps, integrating
-                REST APIs and creating custom dashboards for multi-state field
-                operations. These projects have reduced operational overhead,
-                improved access to real-time data and empowered organizations to
-                scale their workflows with confidence.
+                For nearly 4 years, I have led the development of
+                production-grade Quickbase applications used by multi-state
+                field teams, engineered API integrations across cloud services
+                like AWS, Trello and Zapier and delivered automation workflows
+                that cut operational overhead by over 50%. My work consistently
+                emphasizes collaboration, user-centric interfaces and real-time
+                reporting to empower decision-makers and ground teams alike.
               </p>
 
               <p className="leading-relaxed">
-                I'm particularly motivated by the intersection of process
-                automation, user experience and system interoperability. Whether
-                that means streamlining field operations via Quickbase,
-                stitching together cloud APIs or experimenting with self-hosted
-                LLMs in my homelab. My tools of choice include Python,
-                JavaScript, React, SQL and platforms like AWS and Zapier.
+                I am particularly interested in roles blending application
+                development, business process automation and platform
+                interoperability. My current toolbox includes Quickbase
+                (Pipelines, Webhooks, APIs, Dashboards), JavaScript, React,
+                Python, SQL and platforms like Power Platform and Zapier. I also
+                maintain a private homelab where I prototype integrations with
+                self-hosted LLMs and AI-driven tooling for workflow
+                intelligence.
               </p>
 
               <p className="leading-relaxed">
-                Looking ahead, I'm focused on advancing as a low-code engineer
-                and automation architect, building systems that are technically
-                sound and deeply user-aware. At the heart of everything I do is
-                a drive to simplify complexity and expand access to meaningful
-                technology.
+                I am actively seeking opportunities where I can grow as a
+                low-code engineer and automation architect. My goal is to design
+                systems that simplify complexity, reduce manual effort and
+                expand access to reliable, high-performing technology.
               </p>
 
               <div className="pt-6 border-t border-white/10">

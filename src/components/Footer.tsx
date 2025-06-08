@@ -12,7 +12,8 @@ const Footer = () => {
               Bret<span className="text-cyber-neon"> Bernhoft</span>
             </a>
             <p className="text-white/60 text-sm mt-2">
-              Empowering businesses through automation and integration.
+              Empowering businesses by automating workflows and scaling
+              operations.
             </p>
           </div>
         </div>
