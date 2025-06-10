@@ -11,7 +11,7 @@ const projects = [
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9cc57c32-68ed-4184-b178-b65a94253ebd.png",
     tags: [],
     githubUrl: "",
-    liveUrl: "https://bluesky-reader.netlify.app/",
+    liveUrl: "https://bskyreader.com/",
   },
   {
     id: 2,
