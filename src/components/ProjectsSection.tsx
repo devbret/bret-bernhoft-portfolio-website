@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Bluesky Reader",
     description:
-      "Bluesky Reader is a sophisticated web-based data analysis and visualization tool.",
+      "A web-based, AI-powered social media analysis tool for Bluesky.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9cc57c32-68ed-4184-b178-b65a94253ebd.png",
     tags: [],
