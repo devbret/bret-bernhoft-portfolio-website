@@ -45,10 +45,6 @@ const ContactSection = () => {
               <h4 className="text-lg font-bold mb-3">Available For</h4>
               <ul className="space-y-2 text-white/70">
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-cyber-pink rounded-full mr-3"></div>
-                  Full-Time Positions
-                </li>
-                <li className="flex items-center">
                   <div className="w-2 h-2 bg-cyber-orange rounded-full mr-3"></div>
                   Technical Mentoring
                 </li>
