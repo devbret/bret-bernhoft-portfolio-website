@@ -46,6 +46,15 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 5,
+    name: "Brandon Calderon-Morales",
+    role: "Software Engineer",
+    quote:
+      "Bret is absolutely a gem of a software engineer. He's curious, loves open source, and is an avid proponent of collaboration and maximizing effort on work that matters. Anyone who is currently working with him or works with him in the future would be in GREAT hands",
+    avatarUrl: "",
+    tag: "Software Engineering",
+  },
+  {
+    id: 6,
     name: "John Bailey",
     role: "Cybersecurity Analyst",
     quote:

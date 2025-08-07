@@ -15,33 +15,34 @@ const ContactSection = () => {
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h3>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Want to discuss potential employment opportunities? Feel free to
-            reach out through the provided contact information.
+            Feel free to reach out through the provided contact information.
           </p>
         </div>
 
         <div className="flex justify-center items-center min-h-[50vh]">
           {/* Contact Info */}
-          <div className="space-y-8">
-            <ContactItem
-              icon={Mail}
-              title="Email"
-              value="contact@bretbernhoft.com"
-              href="mailto:contact@bretbernhoft.com"
-            />
-            <ContactItem
-              icon={Phone}
-              title="Phone"
-              value="+1 (503) 801-6123"
-              href="tel:+15038016123"
-            />
-            <ContactItem
-              icon={MapPin}
-              title="Location"
-              value="Vancouver, WA, USA"
-            />
+          <div>
+            <div className="flex flex-col gap-7">
+              <ContactItem
+                icon={Mail}
+                title="Email"
+                value="contact@bretbernhoft.com"
+                href="mailto:contact@bretbernhoft.com"
+              />
+              <ContactItem
+                icon={Phone}
+                title="Phone"
+                value="+1 (503) 801-6123"
+                href="tel:+15038016123"
+              />
+              <ContactItem
+                icon={MapPin}
+                title="Location"
+                value="Vancouver, WA, USA"
+              />
+            </div>
 
-            <div className="p-6 bg-cyber-black/50 border border-white/10 rounded-lg mt-8">
+            <div className="mt-10 p-6 bg-cyber-black/50 border border-white/10 rounded-lg">
               <h4 className="text-lg font-bold mb-3">Available For</h4>
               <ul className="space-y-2 text-white/70">
                 <li className="flex items-center">
