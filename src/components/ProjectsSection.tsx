@@ -19,7 +19,7 @@ const projects = [
     description:
       "Explore a website's internal links, then visualize those connections as a network graph with scorecards and analysis using Claude AI.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ad55b31e-edf3-4a21-a6a2-3e61f4d84a0b.jpg",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/2022e25c-32a3-40e1-b4c6-f6783d5a7d94.jpg",
     tags: [],
     githubUrl: "https://github.com/devbret/website-internal-links",
     liveUrl: "",
