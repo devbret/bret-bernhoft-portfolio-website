@@ -19,7 +19,7 @@ const projects = [
     description:
       "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/82eb5f38-1a22-4079-8946-36a4af7043cf.png",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/7ad127a6-915c-43c4-a5b2-815d29a2cb01.png",
     tags: [],
     githubUrl: "",
     liveUrl: "https://tkh.bretbernhoft.com/",
