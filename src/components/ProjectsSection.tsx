@@ -16,7 +16,8 @@ const projects = [
   {
     id: 2,
     title: "Tech Knowledge Hub",
-    description: "Bret Bernhoft's personal glossary and curated links.",
+    description:
+      "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/4005d04e-0e05-47ed-8272-f499418384b0.png",
     tags: [],
