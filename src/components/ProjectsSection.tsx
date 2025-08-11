@@ -15,6 +15,16 @@ const projects = [
   },
   {
     id: 2,
+    title: "Tech Knowledge Hub",
+    description: "Bret Bernhoft's personal glossary and curated links.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/4005d04e-0e05-47ed-8272-f499418384b0.png",
+    tags: [],
+    githubUrl: "",
+    liveUrl: "https://tkh.bretbernhoft.com/",
+  },
+  {
+    id: 3,
     title: "Mapping A Website's Internal Links",
     description:
       "Explore a website's internal links, then visualize those connections as a network graph with scorecards and analysis using Claude AI.",
@@ -25,7 +35,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "YouTube Playlists Tracker App",
     description:
       "Catalog your viewing progress with specific YouTube playlists, organized by user-defined categories, via this app.",
@@ -36,7 +46,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "Detailed Audio Analyses And Visualizations",
     description:
       "Measure the evolution of various audio features for any number of audio tracks. Then visualize that data.",
@@ -47,7 +57,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 5,
+    id: 6,
     title: "Browser Automation Experiments",
     description:
       " Scripts designed to test, analyze and interact with websites automatically, thus helping improve performance, accessibility and reliability. ",
@@ -58,7 +68,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 6,
+    id: 7,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -69,7 +79,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 7,
+    id: 8,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a Raspberry Pi Zero 2 WH computer with an Adafruit MCP9808 temperature sensor to measure ambient air temperatures.",
@@ -80,7 +90,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 8,
+    id: 9,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B for local AI, with Pi-hole and TrueNAS and OPNsense for DevOps.",
@@ -91,7 +101,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 9,
+    id: 10,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for any allowed number of images using Python. Then visualize that JSON data on a world map with D3.",
@@ -102,7 +112,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -113,7 +123,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 11,
+    id: 12,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
