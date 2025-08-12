@@ -9,7 +9,7 @@ const projects = [
       "A web-based, AI-powered social media analysis tool for Bluesky.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9cc57c32-68ed-4184-b178-b65a94253ebd.png",
-    tags: [],
+    tags: ["Python", "JavaScript", "D3"],
     githubUrl: "",
     liveUrl: "https://bskyreader.com/",
   },
@@ -20,7 +20,7 @@ const projects = [
       "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6f1ed921-1e48-433d-856c-aba6e08dcd95.png",
-    tags: [],
+    tags: ["React", "Vite", "TypeScript"],
     githubUrl: "",
     liveUrl: "https://tkh.bretbernhoft.com/",
   },
@@ -28,10 +28,10 @@ const projects = [
     id: 3,
     title: "Mapping A Website's Internal Links",
     description:
-      "Explore a website's internal links, then visualize those connections as a network graph with scorecards and analysis using Claude AI.",
+      "Explore a website's internal links, then visualize those connections as a network graph with analysis using Claude AI.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/2022e25c-32a3-40e1-b4c6-f6783d5a7d94.jpg",
-    tags: [],
+    tags: ["Python", "JavaScript", "D3"],
     githubUrl: "https://github.com/devbret/website-internal-links",
     liveUrl: "",
   },
@@ -39,10 +39,10 @@ const projects = [
     id: 4,
     title: "YouTube Playlists Tracker App",
     description:
-      "Catalog your viewing progress with specific YouTube playlists, organized by user-defined categories, via this app.",
+      "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
     image:
       "https://hosting.photobucket.com/images/i/bernhoftbret/youtube-playlists-tracker-home-page.png",
-    tags: [],
+    tags: ["Flask", "Python", "JavaScript"],
     githubUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
     liveUrl: "",
   },
@@ -50,10 +50,10 @@ const projects = [
     id: 5,
     title: "Detailed Audio Analyses And Visualizations",
     description:
-      "Measure the evolution of various audio features for any number of audio tracks. Then visualize that data.",
+      "Measure the evolution of audio features for audio tracks. Then visualize the data.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9b9a3c2a-87bb-416f-bc4a-953e594fea16.png",
-    tags: [],
+    tags: ["D3", "Python", "Librosa"],
     githubUrl: "https://github.com/devbret/detailed-audio-analysis",
     liveUrl: "",
   },
@@ -61,10 +61,10 @@ const projects = [
     id: 6,
     title: "Browser Automation Experiments",
     description:
-      " Scripts designed to test, analyze and interact with websites automatically, thus helping improve performance, accessibility and reliability. ",
+      " Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability. ",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ae3971c6-ed8d-4d08-90c0-879edcb15b1a.png",
-    tags: [],
+    tags: ["Selenium", "Puppeteer", "React"],
     githubUrl: "https://github.com/devbret/browser-automation-experiments",
     liveUrl: "",
   },
@@ -75,7 +75,7 @@ const projects = [
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/975f6680-240c-4507-8c73-eb3a1f2b80ba.jpg",
-    tags: [],
+    tags: ["Raspberry Pi", "Python", "D3"],
     githubUrl: "https://github.com/devbret/pihole-data-measurement-tools",
     liveUrl: "",
   },
@@ -83,10 +83,10 @@ const projects = [
     id: 8,
     title: "MCP9808 Sensor Project",
     description:
-      "Code for combining a Raspberry Pi Zero 2 WH computer with an Adafruit MCP9808 temperature sensor to measure ambient air temperatures.",
+      "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/083a8baa-9cbe-4435-9a2b-825bd9222ec2.jpg",
-    tags: [],
+    tags: ["Raspberry Pi", "Flask", "JavaScript"],
     githubUrl: "https://github.com/devbret/mcp9808-sensor-project",
     liveUrl: "",
   },
@@ -94,10 +94,10 @@ const projects = [
     id: 9,
     title: "Homelab Documentation",
     description:
-      "Documentation for a self-hosted Kubernetes homelab running Mistral-7B for local AI, with Pi-hole and TrueNAS and OPNsense for DevOps.",
+      "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/8f6260aa-3b69-430b-8253-4d5d280e92f6.png",
-    tags: [],
+    tags: ["Shell", "Docker", "AI"],
     githubUrl: "https://github.com/devbret/homelab",
     liveUrl: "",
   },
@@ -105,10 +105,10 @@ const projects = [
     id: 10,
     title: "GeoSpy API Mapping Application",
     description:
-      "Query the GeoSpy API for any allowed number of images using Python. Then visualize that JSON data on a world map with D3.",
+      "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
     image:
       "https://hosting.photobucket.com/images/i/bernhoftbret/geospy-api-mapping-app-histogram-update.png",
-    tags: [],
+    tags: ["AI", "Python", "D3"],
     githubUrl: "https://github.com/devbret/geospy-api-mapping",
     liveUrl: "",
   },
@@ -119,7 +119,7 @@ const projects = [
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/e72bbd40-7c45-4172-b046-d0bec18646d7.jpg",
-    tags: [],
+    tags: ["Flask", "JavaScript"],
     githubUrl: "https://github.com/devbret/osint-keyword-searches",
     liveUrl: "",
   },
@@ -130,7 +130,7 @@ const projects = [
       "Check the availability of a username across twenty popular social media platforms.",
     image:
       "https://hosting.photobucket.com/images/i/bernhoftbret/usename-availability-checker-new-dropdown.png",
-    tags: [],
+    tags: ["Python", "JavaScript"],
     githubUrl: "https://github.com/devbret/username-availability-checker",
     liveUrl: "",
     category: "",
@@ -170,6 +170,8 @@ const ProjectsSection = () => {
               image={project.image}
               githubUrl={project.githubUrl}
               liveUrl={project.liveUrl}
+              tags={project.tags} // ✅ Pass tags here
+              gradient="to-b"
             />
           ))}
         </div>
