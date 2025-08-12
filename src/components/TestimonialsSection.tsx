@@ -5,9 +5,11 @@ type Testimonial = {
   quote: string;
   avatarUrl?: string;
   tag?: string;
+  sourceUrl?: string;
+  dateISO?: string;
 };
 
-const testimonials: Testimonial[] = [
+const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
     name: "Christopher Bloom",
@@ -64,16 +66,110 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-const TestimonialsSection = () => {
+function QuoteBlock({
+  quote,
+  author,
+  role,
+  sourceUrl,
+  sourceLabel = "LinkedIn",
+  dateISO,
+}: {
+  quote: string;
+  author: string;
+  role?: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
+  dateISO?: string;
+}) {
+  return (
+    <figure className="relative">
+      <div className="flex items-start gap-4">
+        <div
+          aria-hidden="true"
+          className="w-1 shrink-0 rounded-full"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(34,211,238,0.85) 0%, rgba(168,85,247,0.9) 50%, rgba(250,204,21,0.85) 100%)",
+          }}
+        />
+        <blockquote
+          className="text-white/80 italic"
+          {...(sourceUrl ? { cite: sourceUrl } : {})}
+        >
+          <p>“{quote}”</p>
+        </blockquote>
+      </div>
+
+      <figcaption className="mt-3 ml-[1.25rem] pl-3 border-l border-white/10 text-sm text-white/70">
+        {(sourceUrl || dateISO) && (
+          <>
+            <span className="mx-2 text-white/30">•</span>
+            {sourceUrl ? (
+              <a
+                href={sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-cyan-400/50 hover:decoration-cyan-300 underline-offset-2"
+                title={`View on ${sourceLabel}`}
+              >
+                <cite className="not-italic text-white/80">{sourceLabel}</cite>
+              </a>
+            ) : null}
+            {dateISO ? (
+              <>
+                {sourceUrl ? (
+                  <span className="mx-2 text-white/30">•</span>
+                ) : null}
+                <time dateTime={dateISO}>
+                  {new Date(dateISO).toLocaleDateString(undefined, {
+                    year: "numeric",
+                    month: "short",
+                  })}
+                </time>
+              </>
+            ) : null}
+          </>
+        )}
+      </figcaption>
+    </figure>
+  );
+}
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  return (
+    <article className="h-full bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all relative">
+      <header className="flex items-center gap-4 mb-4">
+        <div>
+          <h4 className="text-lg font-semibold text-white">{t.name}</h4>
+          <p className="text-sm text-white/60">{t.role}</p>
+        </div>
+      </header>
+
+      <QuoteBlock quote={t.quote} author={t.name} role={t.role} />
+
+      {t.tag && (
+        <div className="mt-4">
+          <span className="text-xs px-2 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-200">
+            {t.tag}
+          </span>
+        </div>
+      )}
+
+      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 hover:ring-2 ring-cyan-400/40 transition" />
+    </article>
+  );
+}
+
+export default function TestimonialsSection() {
+  const items = TESTIMONIALS;
   return (
     <section id="endorsements" className="py-20 px-4 cyber-bg relative">
-      <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
-
+      <div className="absolute inset-0 cyber-grid opacity-20 z-0" />
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
             <h2 className="text-cyber-neon font-mono text-lg tracking-widest mb-2">
-              <span className="inline-block w-10 h-[1px] bg-cyber-neon mr-3 align-middle"></span>
+              <span className="inline-block w-10 h-[1px] bg-cyber-neon mr-3 align-middle" />
               ENDORSEMENTS
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold mb-2">
@@ -86,33 +182,15 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Testimonials grid */}
         <div className="flex flex-wrap justify-center -mx-2">
-          {testimonials.map((t) => (
+          {items.map((t) => (
             <div key={t.id} className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-6">
-              <div className="h-full bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-                <div className="flex items-center gap-4 mb-4">
-                  {t.avatarUrl && (
-                    <img
-                      src={t.avatarUrl}
-                      alt={t.name}
-                      className="w-12 h-12 rounded-full border border-white/20"
-                    />
-                  )}
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">
-                      {t.name}
-                    </h4>
-                    <p className="text-sm text-white/60">{t.role}</p>
-                  </div>
-                </div>
-                <p className="text-white/80 italic">“{t.quote}”</p>
-              </div>
+              <TestimonialCard t={t} />
             </div>
           ))}
         </div>
 
-        {testimonials.length === 0 && (
+        {items.length === 0 && (
           <div className="text-center py-20">
             <p className="text-white/70 text-lg">
               No testimonials found for this filter.
@@ -122,6 +200,4 @@ const TestimonialsSection = () => {
       </div>
     </section>
   );
-};
-
-export default TestimonialsSection;
+}
