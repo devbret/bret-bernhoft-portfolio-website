@@ -42,36 +42,33 @@ const AboutSection = () => {
                 development, with a strong focus on building secure, scalable
                 applications using Quickbase and cloud-integrated automation
                 platforms. My background spans from WordPress deployments to
-                business systems, giving me a unique perspective on how people
-                interact with technology at scale.
+                enterprise-grade business systems, giving me a unique
+                perspective on how people interact with technology at scale.
               </p>
 
               <p className="leading-relaxed">
-                For nearly 4 years, I have led the development of
-                production-grade Quickbase applications used by multi-state
-                field teams, engineered API integrations across cloud services
-                like AWS, Trello and Zapier and delivered automation workflows
-                that cut operational overhead by over 20%. My work consistently
+                Since 2021, I have led the development of production-grade
+                Quickbase applications, engineered API integrations across
+                services like AWS, Trello and Zapier, and delivered automation
+                workflows that cut operational overhead. My work consistently
                 emphasizes collaboration, user-centric interfaces and real-time
-                reporting to empower decision-makers and ground teams alike.
+                reporting to empower all users.
               </p>
 
               <p className="leading-relaxed">
-                I am particularly interested in roles blending application
-                development, business process automation and platform
-                interoperability. My current toolbox includes Quickbase
-                (Pipelines, Webhooks, APIs, Dashboards), JavaScript, React,
-                Python, SQL and platforms like Power Platform and Zapier. I also
-                maintain a private homelab where I prototype integrations with
-                self-hosted LLMs and AI-driven tooling for workflow
+                I focus on blending application development, business process
+                automation and platform interoperability. My current toolbox
+                includes Quickbase (Pipelines, Webhooks, APIs, Dashboards),
+                JavaScript, React, Python, SQL and platforms such as Zapier. I
+                also maintain a private homelab where I prototype integrations
+                with self-hosted LLMs and AI-driven tooling for workflow
                 intelligence.
               </p>
 
               <p className="leading-relaxed">
-                I am actively seeking opportunities where I can grow as a
-                low-code engineer and automation architect. My goal is to design
-                systems that simplify complexity, reduce manual effort and
-                expand access to reliable, high-performing technology.
+                My ongoing goal is to design systems that simplify complexity,
+                reduce manual effort and expand access to reliable,
+                high-performing technology.
               </p>
 
               <div className="pt-6 border-t border-white/10">
