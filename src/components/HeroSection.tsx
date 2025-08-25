@@ -11,7 +11,7 @@ const HeroSection = () => {
       if (!el) return;
 
       const fullText =
-        "I build solutions with Quickbase to save time and drive impact.";
+        "I build Quickbase solutions to save time and drive impact.";
       let currentText = "";
       let index = 0;
 
