@@ -73,7 +73,8 @@ const HeroSection = () => {
           ></span>
         </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+        {/* Buttons */}
+        <div className="mt-10 max-[400px]:mt-[120px] flex flex-col sm:flex-row gap-4 max-[400px]:gap-6">
           <a href="#projects">
             <Button className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border">
               View Projects
