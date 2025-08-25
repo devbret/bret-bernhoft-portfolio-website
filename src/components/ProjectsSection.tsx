@@ -37,7 +37,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Character Interactionss",
+    title: "Character Interactions",
     description:
       "Map direct conversations between different characters in a body of text using Python and D3.",
     image:
