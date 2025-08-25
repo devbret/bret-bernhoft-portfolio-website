@@ -44,7 +44,7 @@ const projects = [
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/0b64f1f6-d0ee-493a-ae3c-052b49a74bbc.png",
     tags: ["Python", "JavaScript", "D3"],
     githubUrl: "https://github.com/devbret/character-interactions",
-    liveUrl: "",
+    liveUrl: "https://neuromancer.bretbernhoft.com/",
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const projects = [
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9b9a3c2a-87bb-416f-bc4a-953e594fea16.png",
     tags: ["D3", "Python", "Librosa"],
     githubUrl: "https://github.com/devbret/detailed-audio-analysis",
-    liveUrl: "",
+    liveUrl: "https://daav.bretbernhoft.com/",
   },
   {
     id: 7,
