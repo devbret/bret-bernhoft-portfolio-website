@@ -10,7 +10,8 @@ const HeroSection = () => {
       const el = textRef.current;
       if (!el) return;
 
-      const fullText = "I build solutions that save time and drive impact.";
+      const fullText =
+        "I build solutions with Quickbase to save time and drive impact.";
       let currentText = "";
       let index = 0;
 
