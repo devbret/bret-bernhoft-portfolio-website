@@ -11,7 +11,7 @@ const HeroSection = () => {
       if (!el) return;
 
       const fullText =
-        "I build Quickbase solutions to save time and drive impact.";
+        "I build Quickbase solutions to save time and drive value.";
       let currentText = "";
       let index = 0;
 
@@ -67,15 +67,15 @@ const HeroSection = () => {
           </span>
         </h1>
 
-        <div className="mt-8 h-8">
+        <div className="mt-8 h-13">
           <span
             ref={textRef}
-            className="text-xl md:text-2xl font-mono relative after:absolute after:right-0 after:w-3 after:h-full after:border-r-4 after:border-cyber-neon after:animate-[blink_0.7s_infinite]"
+            className="text-xl md:text-2xl font-mono relative after:absolute after:right-0 after:w-3 after:h-[1em] after:border-r-4 after:border-cyber-neon after:animate-[blink_0.7s_infinite]"
           ></span>
         </div>
 
         {/* Buttons */}
-        <div className="mt-10 max-[400px]:mt-[120px] flex flex-col sm:flex-row gap-4 max-[400px]:gap-6">
+        <div className="mt-10 max-[400px]:mt-[120px] flex flex-col sm:flex-row gap-4 max-[400px]:gap-6 pb-[50px]">
           <a href="#projects">
             <Button className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border">
               View Projects
