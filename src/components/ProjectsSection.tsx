@@ -72,7 +72,7 @@ const projects = [
     id: 7,
     title: "Browser Automation Experiments",
     description:
-      " Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability. ",
+      "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ae3971c6-ed8d-4d08-90c0-879edcb15b1a.png",
     tags: ["Selenium", "Puppeteer", "React"],
@@ -81,6 +81,17 @@ const projects = [
   },
   {
     id: 8,
+    title: "C-TRAN Average Wait Times",
+    description:
+      "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/16027b20-5c57-4dc6-bfb0-399b5accd473.png",
+    tags: ["JS", "Python"],
+    githubUrl: "https://github.com/devbret/c-tran-wait-times",
+    liveUrl: "https://ctran.bretbernhoft.com/",
+  },
+  {
+    id: 9,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -91,7 +102,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 9,
+    id: 10,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
@@ -102,7 +113,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
@@ -113,7 +124,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 11,
+    id: 12,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -124,7 +135,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 12,
+    id: 13,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -135,7 +146,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 13,
+    id: 14,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
