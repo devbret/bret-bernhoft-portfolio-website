@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
 
 type GradientDir = "to-t" | "to-b" | "to-r" | "to-l";
@@ -10,9 +9,7 @@ interface ProjectCardProps {
   githubUrl?: string;
   liveUrl?: string;
   featured?: boolean;
-  /** New: show tech/context tags as chips */
   tags?: string[];
-  /** New: control the gradient overlay direction */
   gradient?: GradientDir;
 }
 
@@ -33,7 +30,6 @@ const ProjectCard = ({
   tags = [],
   gradient = "to-t",
 }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
   const gradientClass = gradientClassMap[gradient];
 
   return (
@@ -41,32 +37,41 @@ const ProjectCard = ({
       className={`group relative rounded-lg overflow-hidden transition-all duration-500 ${
         featured ? "md:col-span-2" : ""
       }`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Overlay And Border Effect */}
-      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 transition-all duration-500 z-20 cyber-border opacity-0 group-hover:opacity-100"></div>
+      {/* Overlay border */}
+      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none"></div>
 
-      {/* Background Image (Updated: hover zoom-in) */}
+      {/* Background Image + gradient */}
       <div className="relative h-64 md:h-72 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center transform transition-transform duration-700 scale-100 group-hover:scale-105"
+          className="absolute inset-0 bg-cover bg-center transform-gpu transition-transform duration-700 scale-100 group-hover:scale-105"
           style={{ backgroundImage: `url(${image})` }}
           aria-hidden="true"
         />
-        {/* Updated: Optional gradient direction */}
         <div className={`absolute inset-0 ${gradientClass} opacity-80`} />
       </div>
 
       {/* Content */}
       <div
-        className={`absolute inset-0 flex flex-col justify-end p-6 transform transition-transform duration-500 ${
-          isHovered ? "translate-y-0" : "translate-y-16"
-        }`}
+        className="
+          absolute inset-0 flex flex-col justify-end p-6
+          transform-gpu translate-y-4 group-hover:translate-y-0
+          transition-transform duration-500 ease-out
+        "
+        style={{ willChange: "transform" }}
       >
-        {/* Tags (Always Visible) */}
+        {/* Reserve a bit of space so the fade-in doesn't cause a jump */}
+        <div className="min-h-24 md:min-h-20" />
+
+        {/* Tags */}
         {tags.length > 0 && (
-          <div className="mb-3 flex flex-wrap gap-2">
+          <div
+            className="
+              mb-3 flex flex-wrap gap-2
+              opacity-90 group-hover:opacity-100
+              transition-opacity duration-300
+            "
+          >
             {tags.map((tag, i) => (
               <span
                 key={`${tag}-${i}`}
@@ -79,17 +84,37 @@ const ProjectCard = ({
         )}
 
         {/* Title */}
-        <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:text-cyber-neon transition-colors">
+        <h3
+          className="
+            text-xl md:text-2xl font-bold mb-2
+            transition-colors group-hover:text-cyber-neon
+          "
+        >
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-white/70 mb-4 line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+        <p
+          className="
+            text-white/80 mb-4
+            opacity-0 group-hover:opacity-100
+            transform-gpu translate-y-1 group-hover:translate-y-0
+            transition-all duration-400 ease-out
+          "
+          // keep a fixed clamp to avoid reflow; remove line-clamp swap
+        >
           {description}
         </p>
 
         {/* Links */}
-        <div className="flex gap-4 items-center mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
+        <div
+          className="
+            flex gap-4 items-center mt-auto
+            opacity-0 group-hover:opacity-100
+            transform-gpu translate-y-1 group-hover:translate-y-0
+            transition-all duration-400 ease-out delay-100
+          "
+        >
           {githubUrl && (
             <a
               href={githubUrl}
