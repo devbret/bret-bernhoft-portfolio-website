@@ -14,8 +14,8 @@ interface ProjectCardProps {
 }
 
 const gradientClassMap: Record<GradientDir, string> = {
-  "to-t": "bg-gradient-to-t from-cyber-black via-cyber-black/80 to-transparent",
-  "to-b": "bg-gradient-to-b from-cyber-black via-cyber-black/80 to-transparent",
+  "to-b": "bg-gradient-to-t from-cyber-black via-cyber-black/80 to-transparent",
+  "to-t": "bg-gradient-to-b from-cyber-black via-cyber-black/80 to-transparent",
   "to-r": "bg-gradient-to-r from-cyber-black via-cyber-black/80 to-transparent",
   "to-l": "bg-gradient-to-l from-cyber-black via-cyber-black/80 to-transparent",
 };
@@ -38,10 +38,8 @@ const ProjectCard = ({
         featured ? "md:col-span-2" : ""
       }`}
     >
-      {/* Overlay border */}
-      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none"></div>
+      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
 
-      {/* Background Image + gradient */}
       <div className="relative h-64 md:h-72 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center transform-gpu transition-transform duration-700 scale-100 group-hover:scale-105"
@@ -51,19 +49,14 @@ const ProjectCard = ({
         <div className={`absolute inset-0 ${gradientClass} opacity-80`} />
       </div>
 
-      {/* Content */}
       <div
         className="
-          absolute inset-0 flex flex-col justify-end p-6
-          transform-gpu translate-y-4 group-hover:translate-y-0
+          absolute inset-0 flex flex-col p-6
+          transform-gpu translate-y-6 group-hover:translate-y-0
           transition-transform duration-500 ease-out
         "
         style={{ willChange: "transform" }}
       >
-        {/* Reserve a bit of space so the fade-in doesn't cause a jump */}
-        <div className="min-h-24 md:min-h-20" />
-
-        {/* Tags */}
         {tags.length > 0 && (
           <div
             className="
@@ -83,36 +76,32 @@ const ProjectCard = ({
           </div>
         )}
 
-        {/* Title */}
         <h3
           className="
-            text-xl md:text-2xl font-bold mb-2
+            text-xl md:text-2xl font-bold mb-3
             transition-colors group-hover:text-cyber-neon
           "
         >
           {title}
         </h3>
 
-        {/* Description */}
         <p
           className="
             text-white/80 mb-4
             opacity-0 group-hover:opacity-100
             transform-gpu translate-y-1 group-hover:translate-y-0
-            transition-all duration-400 ease-out
+            transition-all duration-500 ease-out
           "
-          // keep a fixed clamp to avoid reflow; remove line-clamp swap
         >
           {description}
         </p>
 
-        {/* Links */}
         <div
           className="
-            flex gap-4 items-center mt-auto
+            flex gap-4 items-center
             opacity-0 group-hover:opacity-100
             transform-gpu translate-y-1 group-hover:translate-y-0
-            transition-all duration-400 ease-out delay-100
+            transition-all duration-500 ease-out delay-100
           "
         >
           {githubUrl && (
