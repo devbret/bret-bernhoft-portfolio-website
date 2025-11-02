@@ -30,24 +30,35 @@ const projects = [
     description:
       "Explore a website's internal links, then visualize those connections as a network graph with analysis using Claude AI.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/2022e25c-32a3-40e1-b4c6-f6783d5a7d94.jpg",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/f1949fc3-8240-4820-9ead-70aa2f5ef281.jpg",
     tags: ["Python", "JavaScript", "D3"],
     githubUrl: "https://github.com/devbret/website-internal-links",
     liveUrl: "",
   },
   {
     id: 4,
+    title: "AI Chat Interface",
+    description:
+      "A chat interface for holding conversations with different locally deployed AI models.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/45ccc622-d504-4a70-9500-3346049c5e2d.png",
+    tags: ["Python", "JavaScript", "Ollama"],
+    githubUrl: "https://github.com/devbret/ai-chat-interface",
+    liveUrl: "",
+  },
+  {
+    id: 5,
     title: "Character Interactions",
     description:
       "Map direct conversations between different characters in a body of text using Python and D3.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/0b64f1f6-d0ee-493a-ae3c-052b49a74bbc.png",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/1f62087f-ef61-4cac-b78d-a42f2747f27e.png",
     tags: ["Python", "JavaScript", "D3"],
     githubUrl: "https://github.com/devbret/character-interactions",
     liveUrl: "https://neuromancer.bretbernhoft.com/",
   },
   {
-    id: 5,
+    id: 6,
     title: "YouTube Playlists Tracker App",
     description:
       "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
@@ -58,18 +69,18 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 6,
+    id: 7,
     title: "Detailed Audio Analyses And Visualizations",
     description:
       "Measure the evolution of audio features for audio tracks. Then visualize the data.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9b9a3c2a-87bb-416f-bc4a-953e594fea16.png",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/5294bf06-e212-4af5-91d2-46e6a90a8206.png",
     tags: ["D3", "Python", "Librosa"],
     githubUrl: "https://github.com/devbret/detailed-audio-analysis",
     liveUrl: "https://daav.bretbernhoft.com/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Browser Automation Experiments",
     description:
       "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
@@ -80,7 +91,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 8,
+    id: 9,
     title: "C-TRAN Average Wait Times",
     description:
       "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
@@ -91,7 +102,7 @@ const projects = [
     liveUrl: "https://ctran.bretbernhoft.com/",
   },
   {
-    id: 9,
+    id: 10,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -102,7 +113,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
@@ -113,7 +124,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 11,
+    id: 12,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
@@ -124,7 +135,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 12,
+    id: 13,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -135,7 +146,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 13,
+    id: 14,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -146,7 +157,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 14,
+    id: 15,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
