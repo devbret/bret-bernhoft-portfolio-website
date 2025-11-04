@@ -4,28 +4,6 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     id: 1,
-    title: "Bluesky Reader",
-    description:
-      "A web-based, AI-powered social media analysis tool for Bluesky.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9cc57c32-68ed-4184-b178-b65a94253ebd.png",
-    tags: ["Python", "JavaScript", "D3"],
-    githubUrl: "",
-    liveUrl: "https://bskyreader.com/",
-  },
-  {
-    id: 2,
-    title: "Tech Knowledge Hub",
-    description:
-      "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6f1ed921-1e48-433d-856c-aba6e08dcd95.png",
-    tags: ["React", "Vite", "TypeScript"],
-    githubUrl: "",
-    liveUrl: "https://tkh.bretbernhoft.com/",
-  },
-  {
-    id: 3,
     title: "Mapping A Website's Internal Links",
     description:
       "Explore a website's internal links, then visualize those connections as a network graph with analysis using Claude AI.",
@@ -36,7 +14,18 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 4,
+    id: 2,
+    title: "Tech Knowledge Hub",
+    description:
+      "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/dc9873d2-a81b-44cf-88ad-c29785f98fcf.png",
+    tags: ["React", "Vite", "TypeScript"],
+    githubUrl: "",
+    liveUrl: "https://tkh.bretbernhoft.com/",
+  },
+  {
+    id: 3,
     title: "AI Chat Interface",
     description:
       "A chat interface for holding conversations with different locally deployed AI models.",
@@ -47,7 +36,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 5,
+    id: 4,
     title: "Character Interactions",
     description:
       "Map direct conversations between different characters in a body of text using Python and D3.",
@@ -58,29 +47,29 @@ const projects = [
     liveUrl: "https://neuromancer.bretbernhoft.com/",
   },
   {
-    id: 6,
+    id: 5,
     title: "YouTube Playlists Tracker App",
     description:
       "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
     image:
-      "https://hosting.photobucket.com/images/i/bernhoftbret/youtube-playlists-tracker-home-page.png",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6663859d-0e07-453b-b904-d8a4eb2baacc.png",
     tags: ["Flask", "Python", "JavaScript"],
     githubUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
     liveUrl: "",
   },
   {
-    id: 7,
+    id: 6,
     title: "Detailed Audio Analyses And Visualizations",
     description:
       "Measure the evolution of audio features for audio tracks. Then visualize the data.",
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/5294bf06-e212-4af5-91d2-46e6a90a8206.png",
-    tags: ["D3", "Python", "Librosa"],
+    tags: ["D3", "Python", "JSON", "Librosa"],
     githubUrl: "https://github.com/devbret/detailed-audio-analysis",
     liveUrl: "https://daav.bretbernhoft.com/",
   },
   {
-    id: 8,
+    id: 7,
     title: "Browser Automation Experiments",
     description:
       "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
@@ -91,51 +80,51 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 9,
+    id: 8,
     title: "C-TRAN Average Wait Times",
     description:
       "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/16027b20-5c57-4dc6-bfb0-399b5accd473.png",
-    tags: ["JS", "Python"],
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/4e0df1ec-4a07-416a-871e-bd1ea7c7646c.png",
+    tags: ["JavaScript", "Python", "Public Data"],
     githubUrl: "https://github.com/devbret/c-tran-wait-times",
     liveUrl: "https://ctran.bretbernhoft.com/",
   },
   {
-    id: 10,
+    id: 9,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/975f6680-240c-4507-8c73-eb3a1f2b80ba.jpg",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/7481dd41-3ac9-4d9c-be96-ed25bc34227e.png",
     tags: ["Raspberry Pi", "Python", "D3"],
     githubUrl: "https://github.com/devbret/pihole-data-measurement-tools",
     liveUrl: "",
   },
   {
-    id: 11,
+    id: 10,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/083a8baa-9cbe-4435-9a2b-825bd9222ec2.jpg",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/40a38b82-aff4-458d-904a-63dad791dd9e.png",
     tags: ["Raspberry Pi", "Flask", "JavaScript"],
     githubUrl: "https://github.com/devbret/mcp9808-sensor-project",
     liveUrl: "",
   },
   {
-    id: 12,
+    id: 11,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/8f6260aa-3b69-430b-8253-4d5d280e92f6.png",
-    tags: ["Shell", "Docker", "AI"],
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/b5950ae8-e3a6-4f62-a51d-4a7f8226bd90.jpg",
+    tags: ["Shell", "Docker", "AI", "Networking"],
     githubUrl: "https://github.com/devbret/homelab",
     liveUrl: "",
   },
   {
-    id: 13,
+    id: 12,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -146,18 +135,18 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 14,
+    id: 13,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/e72bbd40-7c45-4172-b046-d0bec18646d7.jpg",
-    tags: ["Flask", "JavaScript"],
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6ac63d6b-a2e7-46f6-90f7-62c691f47025.png",
+    tags: ["Flask", "JavaScript", "JSON"],
     githubUrl: "https://github.com/devbret/osint-keyword-searches",
     liveUrl: "",
   },
   {
-    id: 15,
+    id: 14,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
