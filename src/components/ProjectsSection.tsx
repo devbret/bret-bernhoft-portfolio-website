@@ -21,7 +21,7 @@ const projects = [
     image:
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/dc9873d2-a81b-44cf-88ad-c29785f98fcf.png",
     tags: ["React", "Vite", "TypeScript"],
-    githubUrl: "",
+    githubUrl: "https://github.com/devbret/tech-knowledge-hub",
     liveUrl: "https://tkh.bretbernhoft.com/",
   },
   {
