@@ -61,9 +61,9 @@ const projects = [
     id: 6,
     title: "Detailed Audio Analyses And Visualizations",
     description:
-      "Measure the evolution of audio features for audio tracks. Then visualize the data.",
+      "Measure the evolution of audio features for sound files. Then visualize the data.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/5294bf06-e212-4af5-91d2-46e6a90a8206.png",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/a84d0d1d-61a8-4052-8994-0ae013b16cd0.png",
     tags: ["D3", "Python", "JSON", "Librosa"],
     githubUrl: "https://github.com/devbret/detailed-audio-analysis",
     liveUrl: "https://daav.bretbernhoft.com/",
