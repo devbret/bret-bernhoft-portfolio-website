@@ -32,8 +32,8 @@ const ContactSection = () => {
               <ContactItem
                 icon={Phone}
                 title="Phone"
-                value="+1 (503) 801-6123"
-                href="tel:+15038016123"
+                value="+1 (503) 893-5605"
+                href="tel:+15038935605"
               />
               <ContactItem
                 icon={MapPin}
