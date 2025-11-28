@@ -85,7 +85,7 @@ const projects = [
     description:
       "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/4e0df1ec-4a07-416a-871e-bd1ea7c7646c.png",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/beb13e9c-2b56-4f2b-8e3a-dea0d3cd1d02.png",
     tags: ["JavaScript", "Python", "Public Data"],
     githubUrl: "https://github.com/devbret/c-tran-wait-times",
     liveUrl: "https://ctran.bretbernhoft.com/",
