@@ -11,7 +11,7 @@ const projects = [
       "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/f1949fc3-8240-4820-9ead-70aa2f5ef281.jpg",
     tags: ["Python", "JavaScript", "D3"],
     githubUrl: "https://github.com/devbret/website-internal-links",
-    liveUrl: "",
+    liveUrl: "https://links.bretbernhoft.com/",
   },
   {
     id: 2,
