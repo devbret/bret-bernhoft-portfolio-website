@@ -4,6 +4,17 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     id: 1,
+    title: "Cyberpunk Website",
+    description:
+      "A fictional corporate website set in a cyberpunk universe, built to feel like a real company's public-facing presence.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ea482d80-2d0f-4188-ab99-afc48d1b70f6.png",
+    tags: ["React", "Vite", "Three.js"],
+    githubUrl: "https://github.com/devbret/cyberpunk-corpo-website",
+    liveUrl: "https://corpo.bretbernhoft.com/",
+  },
+  {
+    id: 2,
     title: "Mapping A Website's Internal Links",
     description:
       "Explore a website's internal links, then visualize those connections as a network graph with analysis using Claude AI.",
@@ -14,7 +25,7 @@ const projects = [
     liveUrl: "https://links.bretbernhoft.com/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Tech Knowledge Hub",
     description:
       "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
@@ -25,40 +36,7 @@ const projects = [
     liveUrl: "https://tkh.bretbernhoft.com/",
   },
   {
-    id: 3,
-    title: "AI Chat Interface",
-    description:
-      "A chat interface for holding conversations with different locally deployed AI models.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/45ccc622-d504-4a70-9500-3346049c5e2d.png",
-    tags: ["Python", "JavaScript", "Ollama"],
-    githubUrl: "https://github.com/devbret/ai-chat-interface",
-    liveUrl: "",
-  },
-  {
     id: 4,
-    title: "Character Interactions",
-    description:
-      "Map direct conversations between different characters in a body of text using Python and D3.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/1f62087f-ef61-4cac-b78d-a42f2747f27e.png",
-    tags: ["Python", "JavaScript", "D3"],
-    githubUrl: "https://github.com/devbret/character-interactions",
-    liveUrl: "https://neuromancer.bretbernhoft.com/",
-  },
-  {
-    id: 5,
-    title: "YouTube Playlists Tracker App",
-    description:
-      "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6663859d-0e07-453b-b904-d8a4eb2baacc.png",
-    tags: ["Flask", "Python", "JavaScript"],
-    githubUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
-    liveUrl: "",
-  },
-  {
-    id: 6,
     title: "Detailed Audio Analyses And Visualizations",
     description:
       "Measure the evolution of audio features for sound files. Then visualize the data.",
@@ -69,18 +47,7 @@ const projects = [
     liveUrl: "https://daav.bretbernhoft.com/",
   },
   {
-    id: 7,
-    title: "Browser Automation Experiments",
-    description:
-      "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ae3971c6-ed8d-4d08-90c0-879edcb15b1a.png",
-    tags: ["Selenium", "Puppeteer", "React"],
-    githubUrl: "https://github.com/devbret/browser-automation-experiments",
-    liveUrl: "",
-  },
-  {
-    id: 8,
+    id: 5,
     title: "C-TRAN Average Wait Times",
     description:
       "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
@@ -91,7 +58,51 @@ const projects = [
     liveUrl: "https://ctran.bretbernhoft.com/",
   },
   {
+    id: 6,
+    title: "Character Interactions",
+    description:
+      "Map direct conversations between different characters in a body of text using Python and D3.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/1f62087f-ef61-4cac-b78d-a42f2747f27e.png",
+    tags: ["Python", "JavaScript", "D3"],
+    githubUrl: "https://github.com/devbret/character-interactions",
+    liveUrl: "https://neuromancer.bretbernhoft.com/",
+  },
+  {
+    id: 7,
+    title: "AI Chat Interface",
+    description:
+      "A chat interface for holding conversations with different locally deployed AI models.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/45ccc622-d504-4a70-9500-3346049c5e2d.png",
+    tags: ["Python", "JavaScript", "Ollama"],
+    githubUrl: "https://github.com/devbret/ai-chat-interface",
+    liveUrl: "",
+  },
+  {
+    id: 8,
+    title: "YouTube Playlists Tracker App",
+    description:
+      "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6663859d-0e07-453b-b904-d8a4eb2baacc.png",
+    tags: ["Flask", "Python", "JavaScript"],
+    githubUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
+    liveUrl: "",
+  },
+  {
     id: 9,
+    title: "Browser Automation Experiments",
+    description:
+      "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ae3971c6-ed8d-4d08-90c0-879edcb15b1a.png",
+    tags: ["Selenium", "Puppeteer", "React"],
+    githubUrl: "https://github.com/devbret/browser-automation-experiments",
+    liveUrl: "",
+  },
+  {
+    id: 10,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -102,7 +113,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
@@ -113,7 +124,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 11,
+    id: 12,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
@@ -124,7 +135,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 12,
+    id: 13,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -135,7 +146,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 13,
+    id: 14,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -146,7 +157,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 14,
+    id: 15,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
