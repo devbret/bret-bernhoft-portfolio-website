@@ -30,7 +30,7 @@ const projects = [
     description:
       "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/dc9873d2-a81b-44cf-88ad-c29785f98fcf.png",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/2bae983a-8138-4037-a088-c4faff2a6ee0.png",
     tags: ["React", "Vite", "TypeScript", "FOSS"],
     githubUrl: "https://github.com/devbret/tech-knowledge-hub",
     liveUrl: "https://tkh.bretbernhoft.com/",
