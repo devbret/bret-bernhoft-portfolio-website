@@ -48,6 +48,17 @@ const projects = [
   },
   {
     id: 5,
+    title: "TriMet GTFS Data Visualization",
+    description:
+      "Processes GTFS data into a JSON file, which a frontend decodes to animate vehicles on a map.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/d5e82a70-f5fb-4314-89f7-3d169ad45976.png",
+    tags: ["Python", "Leaflet", "JSON"],
+    githubUrl: "https://github.com/devbret/trimet-gtfs-visualization",
+    liveUrl: "https://trimet.bretbernhoft.com/",
+  },
+  {
+    id: 6,
     title: "C-TRAN Average Wait Times",
     description:
       "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
@@ -58,7 +69,7 @@ const projects = [
     liveUrl: "https://ctran.bretbernhoft.com/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Character Interactions",
     description:
       "Map direct conversations between different characters in a body of text using Python and D3.",
@@ -69,7 +80,7 @@ const projects = [
     liveUrl: "https://neuromancer.bretbernhoft.com/",
   },
   {
-    id: 7,
+    id: 8,
     title: "AI Chat Interface",
     description:
       "A chat interface for holding conversations with different locally deployed AI models.",
@@ -80,7 +91,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 8,
+    id: 9,
     title: "YouTube Playlists Tracker App",
     description:
       "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
@@ -91,7 +102,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 9,
+    id: 10,
     title: "Browser Automation Experiments",
     description:
       "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
@@ -102,7 +113,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -113,7 +124,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 11,
+    id: 12,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
@@ -124,7 +135,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 12,
+    id: 13,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
@@ -135,7 +146,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 13,
+    id: 14,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -146,7 +157,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 14,
+    id: 15,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -157,7 +168,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 15,
+    id: 16,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
