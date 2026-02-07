@@ -4,14 +4,14 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     id: 1,
-    title: "Meetup Pro Network Map",
+    title: "Clark County Vehicle Collisions",
     description:
-      "Visualizes the locations of members from a Meetup network by adding individual points to convey growth at a glance.",
+      "View traffic collision records in Clark County, WA as an interactive web-based heatmap.",
     image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/f88ea833-9447-493b-b62f-6c8a5b72bd85.png",
-    tags: ["Meetup", "JSON", "Leaflet", "Python"],
-    githubUrl: "https://github.com/devbret/meetup-network-map",
-    liveUrl: "https://meetup.bretbernhoft.com/",
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/d8f7c4dd-4d2e-42ad-95fc-112eb79bebb6.png",
+    tags: ["Python", "Leaflet", "Public Domain"],
+    githubUrl: "https://github.com/devbret/clark-county-collisions",
+    liveUrl: "https://collisions.bretbernhoft.com/",
   },
   {
     id: 2,
@@ -37,17 +37,6 @@ const projects = [
   },
   {
     id: 4,
-    title: "Clark County Vehicle Collisions",
-    description:
-      "View traffic collision records in Clark County, WA as an interactive web-based heatmap.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/d8f7c4dd-4d2e-42ad-95fc-112eb79bebb6.png",
-    tags: ["Python", "Leaflet", "Public Domain"],
-    githubUrl: "https://github.com/devbret/clark-county-collisions",
-    liveUrl: "https://collisions.bretbernhoft.com/",
-  },
-  {
-    id: 5,
     title: "Tech Knowledge Hub",
     description:
       "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
@@ -58,7 +47,7 @@ const projects = [
     liveUrl: "https://tkh.bretbernhoft.com/",
   },
   {
-    id: 6,
+    id: 5,
     title: "Detailed Audio Analyses And Visualizations",
     description:
       "Measure the evolution of audio features for sound files. Then visualize the data.",
@@ -69,7 +58,7 @@ const projects = [
     liveUrl: "https://daav.bretbernhoft.com/",
   },
   {
-    id: 7,
+    id: 6,
     title: "TriMet GTFS Data Visualization",
     description:
       "Processes GTFS data into a JSON file, which a frontend decodes to animate vehicles on a map.",
@@ -80,7 +69,7 @@ const projects = [
     liveUrl: "https://trimet.bretbernhoft.com/",
   },
   {
-    id: 8,
+    id: 7,
     title: "FAOSTAT Populations",
     description:
       "Transforms CSV data into an interactive visualization to reveal how country populations change over time.",
@@ -91,7 +80,7 @@ const projects = [
     liveUrl: "https://populations.bretbernhoft.com/",
   },
   {
-    id: 9,
+    id: 8,
     title: "Portland Parks Trees",
     description:
       "View data about trees in parks from Portland, Oregon as an interactive web-based heatmap.",
@@ -102,7 +91,7 @@ const projects = [
     liveUrl: "https://trees.bretbernhoft.com/",
   },
   {
-    id: 10,
+    id: 9,
     title: "C-TRAN Average Wait Times",
     description:
       "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
@@ -113,7 +102,7 @@ const projects = [
     liveUrl: "https://ctran.bretbernhoft.com/",
   },
   {
-    id: 11,
+    id: 10,
     title: "Character Interactions",
     description:
       "Map direct conversations between different characters in a body of text using Python and D3.",
@@ -124,7 +113,7 @@ const projects = [
     liveUrl: "https://neuromancer.bretbernhoft.com/",
   },
   {
-    id: 12,
+    id: 11,
     title: "Rhyming Words",
     description:
       "Analyzes a text file to detect rhymes, builds a network from those relationships and visualizes the resulting structure with D3.",
@@ -135,7 +124,7 @@ const projects = [
     liveUrl: "https://rhymes.bretbernhoft.com/",
   },
   {
-    id: 13,
+    id: 12,
     title: "AI Chat Interface",
     description:
       "A chat interface for holding conversations with different locally deployed AI models.",
@@ -146,7 +135,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 14,
+    id: 13,
     title: "YouTube Playlists Tracker App",
     description:
       "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
@@ -157,7 +146,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 15,
+    id: 14,
     title: "Browser Automation Experiments",
     description:
       "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
@@ -168,7 +157,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 16,
+    id: 15,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -179,7 +168,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 17,
+    id: 16,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
@@ -190,7 +179,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 18,
+    id: 17,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
@@ -201,7 +190,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 19,
+    id: 18,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -212,7 +201,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 20,
+    id: 19,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -223,7 +212,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 21,
+    id: 20,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
