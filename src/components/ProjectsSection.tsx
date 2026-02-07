@@ -125,6 +125,17 @@ const projects = [
   },
   {
     id: 12,
+    title: "Industrialization Paths",
+    description:
+      "Renders an animated D3 bubble chart showing how countries move over time across two economic indicators.",
+    image:
+      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/1dbd2cb2-9a27-4c2a-9d12-c77b51a3e20e.png",
+    tags: ["FAOSTAT", "Python", "D3", "JSON"],
+    githubUrl: "https://github.com/devbret/global-industrialization-paths",
+    liveUrl: "https://global.bretbernhoft.com/",
+  },
+  {
+    id: 13,
     title: "AI Chat Interface",
     description:
       "A chat interface for holding conversations with different locally deployed AI models.",
@@ -135,7 +146,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 13,
+    id: 14,
     title: "YouTube Playlists Tracker App",
     description:
       "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
@@ -146,7 +157,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 14,
+    id: 15,
     title: "Browser Automation Experiments",
     description:
       "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
@@ -157,7 +168,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 15,
+    id: 16,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -168,7 +179,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 16,
+    id: 17,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
@@ -179,7 +190,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 17,
+    id: 18,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
@@ -190,7 +201,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 18,
+    id: 19,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -201,7 +212,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 19,
+    id: 20,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -212,7 +223,7 @@ const projects = [
     liveUrl: "",
   },
   {
-    id: 20,
+    id: 21,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
