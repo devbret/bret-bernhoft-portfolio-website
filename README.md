@@ -1,8 +1,8 @@
 # Bret Bernhoft's Portfolio Website
 
-![Screenshot from the top of the website.](https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/96e23749-2461-4070-ba79-b06087b139f1.png)
+![Screenshot from the top of the website.](https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/4686800f-1ef0-43a3-acf2-3fbf41eefa62.png)
 
-A portfolio website for Bret Bernhoft, a Full Stack Software Engineer who specializes in low-code development with Quickbase and cloud automation.
+A portfolio website for Bret Bernhoft, a software engineer who specializes in low-code development with Quickbase and cloud automation.
 
 ## Overview
 
