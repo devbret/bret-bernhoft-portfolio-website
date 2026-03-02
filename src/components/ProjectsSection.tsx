@@ -277,8 +277,8 @@ const ProjectsSection = () => {
               Featured Work
             </h3>
             <p className="text-white/70 max-w-2xl">
-              Check out some of my recent full stack projects, showcasing
-              design, architecture and everything in between.
+              Check out some of my recent full stack projects showcasing design,
+              architecture and everything in between.
             </p>
           </div>
         </div>
