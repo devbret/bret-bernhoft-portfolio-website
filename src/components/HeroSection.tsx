@@ -54,7 +54,7 @@ const HeroSection = () => {
       <div className="w-full max-w-5xl mx-auto z-20 space-y-6">
         <h2 className="text-cyber-neon font-mono text-xl md:text-2xl tracking-widest">
           <span className="inline-block w-16 h-[1px] bg-cyber-neon mr-3 align-middle"></span>
-          FULL STACK SOFTWARE ENGINEER
+          SOFTWARE ENGINEER
         </h2>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-4 leading-tight">

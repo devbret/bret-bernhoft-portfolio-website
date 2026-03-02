@@ -21,7 +21,7 @@ function ParagraphReveal({
           setVisible(e.isIntersecting);
         });
       },
-      { rootMargin: "-10% 0px -10% 0px", threshold: 0.1 }
+      { rootMargin: "-10% 0px -10% 0px", threshold: 0.1 },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -92,7 +92,7 @@ const AboutSection = () => {
               ABOUT ME
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Passionate Full Stack Software Engineer
+              Passionate Software Engineer
             </h3>
 
             <div className="relative mt-8 mb-6 hidden lg:block">
@@ -121,10 +121,10 @@ const AboutSection = () => {
             <div className="space-y-6 text-white/80 max-w-prose md:leading-8">
               <ParagraphReveal>
                 <p className="text-lg md:text-xl leading-[2.1rem] md:leading-[2.13rem]">
-                  I am a Full Stack Software Engineer specializing in low-code
-                  development, with a strong focus on building secure, scalable
-                  applications using Quickbase and cloud-integrated automation
-                  platforms. My background spans from WordPress deployments to
+                  I am a software engineer specializing in low-code development,
+                  with a strong focus on building secure, scalable applications
+                  using Quickbase and cloud-integrated automation platforms. My
+                  background spans from WordPress deployments to
                   enterprise-grade business systems, giving me a unique
                   perspective on how people interact with technology at scale.
                 </p>
@@ -132,10 +132,10 @@ const AboutSection = () => {
 
               <ParagraphReveal>
                 <p className="leading-relaxed md:leading-8">
-                  Since 2021, I have led the development of production-grade
+                  Since 2021, I have led the development of production-ready
                   Quickbase applications, engineered API integrations across
-                  services like AWS, Trello and Zapier, and delivered automation
-                  workflows that cut operational overhead. My work consistently
+                  services like AWS, Trello and Zapier and delivered automation
+                  workflows to cut operational overhead. My work consistently
                   emphasizes collaboration, user-centric interfaces and
                   real-time reporting to empower all users.
                 </p>
@@ -145,11 +145,10 @@ const AboutSection = () => {
                 <p className="leading-relaxed md:leading-8">
                   I focus on blending application development, business process
                   automation and platform interoperability. My current toolbox
-                  includes Quickbase (Pipelines, Webhooks, APIs, Dashboards),
-                  JavaScript, React, Python, SQL and platforms such as Zapier. I
-                  also maintain a private homelab where I prototype integrations
-                  with self-hosted LLMs and AI-driven tooling for workflow
-                  intelligence.
+                  includes Quickbase, AI, Python, TypeScript, React, SQL and
+                  platforms such as Zapier. I also maintain a private homelab
+                  where I prototype integrations with self-hosted LLMs and
+                  AI-driven tooling.
                 </p>
               </ParagraphReveal>
 
@@ -167,7 +166,7 @@ const AboutSection = () => {
                   <CoreValueCard
                     icon={Cpu}
                     title="Clean Code"
-                    desc="Writing maintainable, readable, and efficient code"
+                    desc="Writing maintainable, readable and efficient code"
                   />
                   <CoreValueCard
                     icon={Workflow}

@@ -18,7 +18,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="flex justify-center items-center min-h-[50vh]">
+        <div className="flex justify-center items-center min-h-[34vh]">
           <div>
             <div className="flex flex-col gap-7">
               <ContactItem
