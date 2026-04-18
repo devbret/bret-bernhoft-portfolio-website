@@ -38,7 +38,7 @@ const Navbar = () => {
           <NavLink href="#contact">Contact</NavLink>
 
           <a
-            href="https://drive.google.com/file/d/1DjITrlnUBJktmD0JRRAa0zcUzHoHjgpV/view"
+            href="https://drive.google.com/file/d/1ug05pOuWw8h-yiW9DZa75UvNt_blcYLh/view"
             download
             target="_blank"
             className="ml-3"
