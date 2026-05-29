@@ -148,7 +148,7 @@ const Navbar = () => {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1DjITrlnUBJktmD0JRRAa0zcUzHoHjgpV/view"
+            href="https://drive.google.com/file/d/1ug05pOuWw8h-yiW9DZa75UvNt_blcYLh/view"
             download
             className="mt-4"
             target="_blank"
@@ -179,7 +179,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href="https://github.com"
+              href="https://github.com/devbret"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -192,7 +192,7 @@ const Navbar = () => {
                 <Github className="h-5 w-5" />
               </Button>
             </a>
-            <a href="mailto:contact@example.com" aria-label="Email">
+            <a href="mailto:contact@bretbernhoft.com" aria-label="Email">
               <Button
                 variant="ghost"
                 size="icon"

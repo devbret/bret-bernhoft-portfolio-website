@@ -23,8 +23,6 @@ const Footer = () => {
             <Code className="w-4 h-4 mr-2" />
             <span>© {currentYear} Bret Bernhoft. All rights reserved.</span>
           </div>
-
-          <div className="flex space-x-6"></div>
         </div>
       </div>
     </footer>
