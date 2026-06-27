@@ -27,7 +27,6 @@ const skillCategories: SkillCategory[] = [
       "HTML5 / CSS3",
       "Bash",
       "PHP",
-      "Ruby",
     ],
   },
   {
@@ -113,7 +112,7 @@ const SkillsSection = () => {
           </h3>
           <p className="text-white/70 max-w-2xl mx-auto">
             The tools, languages and platforms I reach for to build complete,
-            scalable applications — from front-end interfaces to back-end
+            scalable applications - from front-end interfaces to back-end
             automation and self-hosted infrastructure.
           </p>
         </div>
