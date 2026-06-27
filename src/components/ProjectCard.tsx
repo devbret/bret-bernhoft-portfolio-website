@@ -38,7 +38,7 @@ const ProjectCard = ({
         featured ? "md:col-span-2" : ""
       }`}
     >
-      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
+      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 group-focus-within:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
 
       <div className="relative h-64 md:h-72 overflow-hidden">
         <div
@@ -52,7 +52,9 @@ const ProjectCard = ({
       <div
         className="
           absolute inset-0 flex flex-col p-6
-          transform-gpu translate-y-6 group-hover:translate-y-0
+          transform-gpu translate-y-6
+          group-hover:translate-y-0 group-focus-within:translate-y-0
+          [@media(hover:none)]:translate-y-0
           transition-transform duration-500 ease-out
         "
         style={{ willChange: "transform" }}
@@ -88,8 +90,11 @@ const ProjectCard = ({
         <p
           className="
             text-white/80 mb-4
-            opacity-0 group-hover:opacity-100
-            transform-gpu translate-y-1 group-hover:translate-y-0
+            opacity-0 group-hover:opacity-100 group-focus-within:opacity-100
+            [@media(hover:none)]:opacity-100
+            transform-gpu translate-y-1
+            group-hover:translate-y-0 group-focus-within:translate-y-0
+            [@media(hover:none)]:translate-y-0
             transition-all duration-500 ease-out
           "
         >
@@ -99,8 +104,11 @@ const ProjectCard = ({
         <div
           className="
             flex gap-4 items-center
-            opacity-0 group-hover:opacity-100
-            transform-gpu translate-y-1 group-hover:translate-y-0
+            opacity-0 group-hover:opacity-100 group-focus-within:opacity-100
+            [@media(hover:none)]:opacity-100
+            transform-gpu translate-y-1
+            group-hover:translate-y-0 group-focus-within:translate-y-0
+            [@media(hover:none)]:translate-y-0
             transition-all duration-500 ease-out delay-100
           "
         >

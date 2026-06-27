@@ -1,83 +1,97 @@
-import { Code, LayoutDashboard, Share2, Cpu, Globe, Zap } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
+import {
+  Code,
+  BrainCircuit,
+  LayoutDashboard,
+  Share2,
+  Workflow,
+  Server,
+} from "lucide-react";
+import type { ElementType } from "react";
 
-const skillCategories = [
+type SkillCategory = {
+  id: string;
+  title: string;
+  icon: ElementType;
+  skills: string[];
+};
+
+const skillCategories: SkillCategory[] = [
   {
-    id: "core",
-    title: "Core Development",
-    icon: Globe,
+    id: "languages",
+    title: "Languages",
+    icon: Code,
     skills: [
-      { name: "JavaScript / TypeScript", level: 100 },
-      { name: "HTML5 / CSS3", level: 100 },
-      { name: "Python", level: 85 },
-      { name: "Node.js / Express", level: 85 },
-      { name: "SQL / MySQL", level: 80 },
-      { name: "Flask (Python)", level: 75 },
+      "JavaScript / TypeScript",
+      "Python",
+      "SQL / MySQL",
+      "HTML5 / CSS3",
+      "Bash",
+      "PHP",
+      "Ruby",
     ],
   },
   {
-    id: "frontend",
-    title: "Frontend And UI Engineering",
-    icon: LayoutDashboard,
+    id: "ai",
+    title: "Artificial Intelligence",
+    icon: BrainCircuit,
     skills: [
-      { name: "React", level: 100 },
-      { name: "Vite", level: 90 },
-      { name: "D3.js", level: 90 },
-      { name: "Tailwind CSS", level: 85 },
-      { name: "Three.js", level: 75 },
-      { name: "AngularJS", level: 70 },
-    ],
-  },
-  {
-    id: "apis",
-    title: "APIs And Integration",
-    icon: Share2,
-    skills: [
-      { name: "REST API Design And Integration", level: 95 },
-      { name: "Quickbase API And Automation", level: 90 },
-      { name: "Zapier", level: 85 },
-      { name: "Webhooks", level: 80 },
-      { name: "GraphQL", level: 80 },
-      { name: "OAuth And Authentication Systems", level: 75 },
-    ],
-  },
-  {
-    id: "tools",
-    title: "DevOps And Automation",
-    icon: Zap,
-    skills: [
-      { name: "Docker / GitHub Actions", level: 90 },
-      { name: "CI/CD Pipelines", level: 85 },
-      { name: "AWS (EC2, RDS)", level: 85 },
-      { name: "Proxmox / Linux Admin", level: 80 },
-      { name: "OPNsense / Pi-hole", level: 80 },
-      { name: "Netlify / Nginx / Self-Hosting", level: 80 },
+      "Gemma",
+      "Mistral",
+      "Anthropic",
+      "OpenAI",
+      "Copilot",
+      "Perplexity",
+      "Cursor",
     ],
   },
   {
     id: "lowcode",
-    title: "Low-Code And Productivity Tools",
-    icon: Cpu,
+    title: "Low-Code & Deployment",
+    icon: Workflow,
     skills: [
-      { name: "Quickbase Development", level: 95 },
-      { name: "Zapier Automation", level: 90 },
-      { name: "Git / GitHub Workflows", level: 90 },
-      { name: "Notion", level: 85 },
-      { name: "Airtable", level: 80 },
-      { name: "Trello", level: 75 },
+      "Quickbase",
+      "AWS",
+      "Zapier",
+      "Notion",
+      "Trello",
+      "Docker",
+      "Portainer",
+      "Kubernetes",
     ],
   },
   {
-    id: "languages",
-    title: "Scripting And Languages",
-    icon: Code,
+    id: "frontend",
+    title: "Frontend & UI",
+    icon: LayoutDashboard,
+    skills: ["React", "Vite", "Tailwind CSS", "D3.js", "Three.js", "AngularJS"],
+  },
+  {
+    id: "backend",
+    title: "Backend & APIs",
+    icon: Share2,
     skills: [
-      { name: "JavaScript / TypeScript", level: 100 },
-      { name: "HTML5 / CSS3", level: 100 },
-      { name: "Python", level: 85 },
-      { name: "Bash", level: 75 },
-      { name: "PHP", level: 65 },
-      { name: "Ruby", level: 60 },
+      "Node.js / Express",
+      "Flask",
+      "REST APIs",
+      "GraphQL",
+      "Webhooks",
+      "OAuth",
+    ],
+  },
+  {
+    id: "devops",
+    title: "DevOps & Homelab",
+    icon: Server,
+    skills: [
+      "Linux",
+      "Raspberry Pi",
+      "CI/CD",
+      "Git / GitHub",
+      "AWS",
+      "Netlify",
+      "Proxmox",
+      "Pi-hole",
+      "OPNsense",
     ],
   },
 ];
@@ -98,9 +112,9 @@ const SkillsSection = () => {
             Technical Expertise
           </h3>
           <p className="text-white/70 max-w-2xl mx-auto">
-            As a software engineer, I have honed my skills across various
-            technologies and frameworks, allowing me to build complete, scalable
-            applications from front to back.
+            The tools, languages and platforms I reach for to build complete,
+            scalable applications — from front-end interfaces to back-end
+            automation and self-hosted infrastructure.
           </p>
         </div>
 
@@ -108,7 +122,7 @@ const SkillsSection = () => {
           {skillCategories.map((category) => (
             <div
               key={category.id}
-              className="bg-cyber-black/40 border border-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8 relative group overflow-hidden transition-all hover:border-cyber-neon/30"
+              className="bg-cyber-black/40 border border-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8 relative overflow-hidden transition-all hover:border-cyber-neon/30"
             >
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyber-neon opacity-70"></div>
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyber-pink opacity-70"></div>
@@ -122,19 +136,15 @@ const SkillsSection = () => {
                 <h4 className="text-xl font-bold">{category.title}</h4>
               </div>
 
-              <div className="space-y-5">
-                {category.skills.map((skill, idx) => (
-                  <div key={idx}>
-                    <div className="flex justify-between mb-1">
-                      <span className="font-mono text-sm">{skill.name}</span>
-                      <span className="font-mono text-xs text-cyber-neon">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <Progress value={skill.level} className="h-2 bg-white/10" />
-                  </div>
+              <ul className="flex flex-wrap gap-2.5">
+                {category.skills.map((skill) => (
+                  <li key={skill}>
+                    <span className="inline-block px-3 py-1.5 text-sm font-mono rounded-full border border-cyber-neon/30 bg-cyber-black/40 text-white/80 transition-colors hover:border-cyber-neon hover:text-cyber-neon hover:bg-cyber-neon/5">
+                      {skill}
+                    </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
