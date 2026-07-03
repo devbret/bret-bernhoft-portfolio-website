@@ -41,6 +41,7 @@ const Navbar = () => {
             href="https://drive.google.com/file/d/1ug05pOuWw8h-yiW9DZa75UvNt_blcYLh/view"
             download
             target="_blank"
+            rel="noopener noreferrer"
             className="ml-3"
           >
             <Button
@@ -98,16 +99,19 @@ const Navbar = () => {
           className="md:hidden text-white p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle Menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           {mobileMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
 
       <div
+        id="mobile-menu"
         className={`md:hidden ${
           mobileMenuOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-4 pointer-events-none"
+            ? "visible opacity-100 translate-y-0 pointer-events-auto"
+            : "invisible opacity-0 -translate-y-4 pointer-events-none"
         } transition-all duration-300 absolute w-full bg-cyber-black/95 border-b border-cyber-neon/20 backdrop-blur-md`}
       >
         <nav className="container mx-auto flex flex-col py-4 px-4">
@@ -152,6 +156,7 @@ const Navbar = () => {
             download
             className="mt-4"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Button
               variant="outline"

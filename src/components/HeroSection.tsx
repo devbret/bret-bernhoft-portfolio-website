@@ -6,29 +6,23 @@ const HeroSection = () => {
   const textRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const typeText = () => {
-      const el = textRef.current;
-      if (!el) return;
+    const el = textRef.current;
+    if (!el) return;
 
-      const fullText =
-        "I build Quickbase solutions to save time and drive value.";
-      let currentText = "";
-      let index = 0;
+    const fullText =
+      "I build Quickbase solutions to save time and drive value.";
+    let index = 0;
 
-      const interval = setInterval(() => {
-        if (index < fullText.length) {
-          currentText += fullText.charAt(index);
-          el.textContent = currentText;
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 100);
+    const interval = setInterval(() => {
+      if (index < fullText.length) {
+        index++;
+        el.textContent = fullText.slice(0, index);
+      } else {
+        clearInterval(interval);
+      }
+    }, 100);
 
-      return () => clearInterval(interval);
-    };
-
-    typeText();
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -52,10 +46,10 @@ const HeroSection = () => {
       </div>
 
       <div className="w-full max-w-5xl mx-auto z-20 space-y-6">
-        <h2 className="text-cyber-neon font-mono text-xl md:text-2xl tracking-widest">
+        <p className="text-cyber-neon font-mono text-xl md:text-2xl tracking-widest">
           <span className="inline-block w-16 h-[1px] bg-cyber-neon mr-3 align-middle"></span>
           SOFTWARE ENGINEER
-        </h2>
+        </p>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-4 leading-tight">
           <span className="block">Empowering businesses</span>
@@ -64,14 +58,14 @@ const HeroSection = () => {
           </span>
         </h1>
 
-        <div className="mt-8 h-13">
+        <div className="mt-8 min-h-[5.25rem] md:min-h-16">
           <span
             ref={textRef}
             className="text-xl md:text-2xl font-mono relative after:absolute after:right-0 after:w-3 after:h-[1em] after:border-r-4 after:border-cyber-neon after:animate-[blink_0.7s_infinite]"
           ></span>
         </div>
 
-        <div className="mt-10 max-[400px]:mt-[120px] flex flex-col sm:flex-row gap-4 max-[400px]:gap-6 pb-[50px]">
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 max-[400px]:gap-6 pb-[50px]">
           <a href="#projects">
             <Button className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border">
               View Projects

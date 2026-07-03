@@ -41,10 +41,11 @@ const ProjectCard = ({
       <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 group-focus-within:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
 
       <div className="relative h-64 md:h-72 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center transform-gpu transition-transform duration-700 scale-100 group-hover:scale-105"
-          style={{ backgroundImage: `url(${image})` }}
-          aria-hidden="true"
+        <img
+          src={image}
+          alt={`${title} screenshot`}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover transform-gpu transition-transform duration-700 scale-100 group-hover:scale-105"
         />
         <div className={`absolute inset-0 ${gradientClass} opacity-80`} />
       </div>
