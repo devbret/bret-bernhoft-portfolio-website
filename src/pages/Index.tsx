@@ -11,6 +11,9 @@ import Footer from "../components/Footer";
 const Index = () => {
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0)
+        return;
+
       const target = e.target as HTMLElement;
       const link = target.closest("a");
 
@@ -41,7 +44,6 @@ const Index = () => {
 
   return (
     <div className="cyber-bg min-h-screen text-white relative">
-      {}
       <div className="fixed inset-0 bg-gradient-to-br from-cyber-black via-cyber-dark-purple to-cyber-black opacity-80 z-0"></div>
 
       <Navbar />
@@ -53,7 +55,6 @@ const Index = () => {
       <ContactSection />
       <Footer />
 
-      {}
       <div className="fixed top-0 left-0 w-24 h-24 pointer-events-none z-10">
         <div className="absolute top-8 left-0 w-16 h-1 bg-cyber-neon"></div>
         <div className="absolute top-0 left-8 w-1 h-16 bg-cyber-neon"></div>

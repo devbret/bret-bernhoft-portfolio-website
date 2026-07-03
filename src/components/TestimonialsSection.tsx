@@ -68,15 +68,11 @@ const TESTIMONIALS: Testimonial[] = [
 
 function QuoteBlock({
   quote,
-  author,
-  role,
   sourceUrl,
   sourceLabel = "LinkedIn",
   dateISO,
 }: {
   quote: string;
-  author: string;
-  role?: string;
   sourceUrl?: string;
   sourceLabel?: string;
   dateISO?: string;
@@ -100,37 +96,32 @@ function QuoteBlock({
         </blockquote>
       </div>
 
-      <figcaption className="mt-3 ml-[1.25rem] pl-3 border-l border-white/10 text-sm text-white/70">
-        {(sourceUrl || dateISO) && (
-          <>
+      {(sourceUrl || dateISO) && (
+        <figcaption className="mt-3 ml-[1.25rem] pl-3 border-l border-white/10 text-sm text-white/70">
+          {sourceUrl && (
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-cyan-400/50 hover:decoration-cyan-300 underline-offset-2"
+              title={`View on ${sourceLabel}`}
+            >
+              <cite className="not-italic text-white/80">{sourceLabel}</cite>
+            </a>
+          )}
+          {sourceUrl && dateISO && (
             <span className="mx-2 text-white/30">•</span>
-            {sourceUrl ? (
-              <a
-                href={sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-cyan-400/50 hover:decoration-cyan-300 underline-offset-2"
-                title={`View on ${sourceLabel}`}
-              >
-                <cite className="not-italic text-white/80">{sourceLabel}</cite>
-              </a>
-            ) : null}
-            {dateISO ? (
-              <>
-                {sourceUrl ? (
-                  <span className="mx-2 text-white/30">•</span>
-                ) : null}
-                <time dateTime={dateISO}>
-                  {new Date(dateISO).toLocaleDateString(undefined, {
-                    year: "numeric",
-                    month: "short",
-                  })}
-                </time>
-              </>
-            ) : null}
-          </>
-        )}
-      </figcaption>
+          )}
+          {dateISO && (
+            <time dateTime={dateISO}>
+              {new Date(dateISO).toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "short",
+              })}
+            </time>
+          )}
+        </figcaption>
+      )}
     </figure>
   );
 }
@@ -145,7 +136,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
         </div>
       </header>
 
-      <QuoteBlock quote={t.quote} author={t.name} role={t.role} />
+      <QuoteBlock quote={t.quote} sourceUrl={t.sourceUrl} dateISO={t.dateISO} />
 
       {t.tag && (
         <div className="mt-4">
@@ -161,7 +152,6 @@ function TestimonialCard({ t }: { t: Testimonial }) {
 }
 
 export default function TestimonialsSection() {
-  const items = TESTIMONIALS;
   return (
     <section id="endorsements" className="py-20 px-4 cyber-bg relative">
       <div className="absolute inset-0 cyber-grid opacity-20 z-0" />
@@ -183,20 +173,12 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="flex flex-wrap justify-center -mx-2">
-          {items.map((t) => (
+          {TESTIMONIALS.map((t) => (
             <div key={t.id} className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-6">
               <TestimonialCard t={t} />
             </div>
           ))}
         </div>
-
-        {items.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-white/70 text-lg">
-              No testimonials found for this filter.
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );

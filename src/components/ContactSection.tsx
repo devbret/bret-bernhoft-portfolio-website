@@ -90,14 +90,12 @@ const ContactItem = ({
     </a>
   ) : (
     <div className="flex items-center">
-      <div className="p-3 bg-cyber-purple/10 rounded-md mr-4 group-hover:bg-cyber-purple/20 transition-all">
+      <div className="p-3 bg-cyber-purple/10 rounded-md mr-4">
         <Icon className="w-6 h-6 text-cyber-purple" />
       </div>
       <div>
         <h4 className="text-sm font-medium text-white/70">{title}</h4>
-        <p className="font-semibold group-hover:text-cyber-neon transition-colors">
-          {value}
-        </p>
+        <p className="font-semibold">{value}</p>
       </div>
     </div>
   );
