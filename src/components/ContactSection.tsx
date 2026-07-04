@@ -1,9 +1,22 @@
+import { lazy, Suspense, useRef } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+const ContactGlobe = lazy(() => import("./ContactGlobe"));
+
 const ContactSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <section id="contact" className="py-20 px-4 cyber-bg relative">
+    <section
+      ref={sectionRef}
+      id="contact"
+      className="py-20 px-4 cyber-bg relative"
+    >
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
+
+      <Suspense fallback={null}>
+        <ContactGlobe targetRef={sectionRef} />
+      </Suspense>
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
@@ -70,6 +83,7 @@ const ContactItem = ({
   href ? (
     <a
       href={href}
+      data-contact={title}
       className="flex items-start group transition-all"
       target={
         href.startsWith("mailto:") || href.startsWith("tel:")
@@ -89,7 +103,7 @@ const ContactItem = ({
       </div>
     </a>
   ) : (
-    <div className="flex items-center">
+    <div data-contact={title} className="flex items-center">
       <div className="p-3 bg-cyber-purple/10 rounded-md mr-4">
         <Icon className="w-6 h-6 text-cyber-purple" />
       </div>

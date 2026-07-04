@@ -1,9 +1,13 @@
-import { useEffect, useRef } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const HeroCanvas = lazy(() => import("./HeroCanvas"));
 
 const HeroSection = () => {
   const textRef = useRef<HTMLSpanElement>(null);
+  const [canvasReady, setCanvasReady] = useState(false);
 
   useEffect(() => {
     const el = textRef.current;
@@ -30,7 +34,15 @@ const HeroSection = () => {
       className="min-h-screen relative flex flex-col justify-center items-start px-4 lg:px-24 py-24 overflow-hidden cyber-bg"
       id="home"
     >
-      <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
+      <div
+        className={cn(
+          "absolute inset-0 cyber-grid z-0 transition-opacity duration-1000",
+          canvasReady ? "opacity-0" : "opacity-20",
+        )}
+      ></div>
+      <Suspense fallback={null}>
+        <HeroCanvas onReady={() => setCanvasReady(true)} />
+      </Suspense>
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
 

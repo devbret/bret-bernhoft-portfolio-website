@@ -1,3 +1,12 @@
+import { lazy, Suspense, useRef } from "react";
+import { cyberRgba, TOPIC_COLORS } from "@/lib/palette";
+
+const EndorsementEmblems = lazy(() => import("./EndorsementEmblems"));
+
+const TAG_RING: Record<string, string> = Object.fromEntries(
+  Object.entries(TOPIC_COLORS).map(([tag, hex]) => [tag, cyberRgba(hex, 0.38)]),
+);
+
 type Testimonial = {
   id: number;
   name: string;
@@ -128,8 +137,21 @@ function QuoteBlock({
 
 function TestimonialCard({ t }: { t: Testimonial }) {
   return (
-    <article className="h-full bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all relative">
+    <article
+      data-endorsement={t.name}
+      className="h-full bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all relative"
+    >
       <header className="flex items-center gap-4 mb-4">
+        <div
+          aria-hidden="true"
+          data-emblem={t.name}
+          data-tag={t.tag}
+          className="w-12 h-12 shrink-0 rounded-full border bg-white/5"
+          style={{
+            borderColor:
+              TAG_RING[t.tag ?? ""] ?? TAG_RING["Software Engineering"],
+          }}
+        />
         <div>
           <h4 className="text-lg font-semibold text-white">{t.name}</h4>
           <p className="text-sm text-white/60">{t.role}</p>
@@ -152,9 +174,18 @@ function TestimonialCard({ t }: { t: Testimonial }) {
 }
 
 export default function TestimonialsSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <section id="endorsements" className="py-20 px-4 cyber-bg relative">
+    <section
+      ref={sectionRef}
+      id="endorsements"
+      className="py-20 px-4 cyber-bg relative"
+    >
       <div className="absolute inset-0 cyber-grid opacity-20 z-0" />
+      <Suspense fallback={null}>
+        <EndorsementEmblems targetRef={sectionRef} />
+      </Suspense>
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
