@@ -1,5 +1,17 @@
-import { useEffect, useRef, useState, type ElementType } from "react";
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+  type ElementType,
+} from "react";
 import { ArrowDown, Cpu, Workflow, Zap, Shield } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const HoloPortrait = lazy(() => import("./HoloPortrait"));
+
+const PORTRAIT_SRC = "/portrait.jpeg";
 
 function ParagraphReveal({
   children,
@@ -77,6 +89,8 @@ function CoreValueCard({
 }
 
 const AboutSection = () => {
+  const [holoReady, setHoloReady] = useState(false);
+
   return (
     <section
       id="about"
@@ -98,7 +112,7 @@ const AboutSection = () => {
             <div className="relative mt-8 mb-6 hidden lg:block">
               <div
                 className={[
-                  "group relative w-64 h-64 rounded-lg overflow-hidden border-2 border-cyber-neon/50 cyber-border",
+                  "group relative w-80 h-80 rounded-lg overflow-hidden border-2 border-cyber-neon/50 cyber-border",
                   "bg-black/20 transform-gpu",
                   "motion-safe:hover:rotate-[1.5deg] motion-safe:hover:translate-x-0.5 motion-safe:hover:-translate-y-0.5",
                   "transition-all duration-300",
@@ -108,12 +122,20 @@ const AboutSection = () => {
                 <div className="pointer-events-none absolute -inset-0.5 rounded-lg opacity-0 blur-md transition duration-300 group-hover:opacity-100 bg-gradient-to-br from-cyber-neon/25 to-cyber-pink/25" />
                 <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/20 to-cyber-blue/10" />
                 <img
-                  src="https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/5a3517f9-fee3-4763-93ff-238c315bb034.jpeg"
+                  src={PORTRAIT_SRC}
                   alt="Engineer Portrait"
-                  className="w-full h-full object-cover"
+                  className={cn(
+                    "w-full h-full object-cover transition-opacity duration-700",
+                    holoReady && "opacity-0",
+                  )}
                 />
+                <Suspense fallback={null}>
+                  <HoloPortrait
+                    src={PORTRAIT_SRC}
+                    onReady={() => setHoloReady(true)}
+                  />
+                </Suspense>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-64 h-64 border-2 border-cyber-pink/50 rounded-lg"></div>
             </div>
           </div>
 

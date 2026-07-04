@@ -34,6 +34,7 @@ const ProjectCard = ({
 
   return (
     <div
+      data-holo-src={image}
       className={`group relative rounded-lg overflow-hidden transition-all duration-500 ${
         featured ? "md:col-span-2" : ""
       }`}

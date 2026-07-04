@@ -1,253 +1,11 @@
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useMemo, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { projects } from "@/data/projects";
 
-const projects = [
-  {
-    id: 1,
-    title: "Clark County Vehicle Collisions",
-    description:
-      "View traffic collision records in Clark County, WA as an interactive web-based heatmap.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/d8f7c4dd-4d2e-42ad-95fc-112eb79bebb6.png",
-    tags: ["Python", "Leaflet", "Public Domain"],
-    githubUrl: "https://github.com/devbret/clark-county-collisions",
-    liveUrl: "https://collisions.bretbernhoft.com/",
-  },
-  {
-    id: 2,
-    title: "Cyberpunk Website",
-    description:
-      "A fictional corporate website set in a cyberpunk universe, built to feel like a real company's public-facing presence.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ea482d80-2d0f-4188-ab99-afc48d1b70f6.png",
-    tags: ["React", "Vite", "Three.js", "Node.js"],
-    githubUrl: "https://github.com/devbret/cyberpunk-corpo-website",
-    liveUrl: "https://corpo.bretbernhoft.com/",
-  },
-  {
-    id: 3,
-    title: "Mapping A Website's Internal Links",
-    description:
-      "Explore a website's internal links, then visualize those connections as a network graph with analysis using Claude AI.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/f1949fc3-8240-4820-9ead-70aa2f5ef281.jpg",
-    tags: ["Python", "JavaScript", "D3", "OSINT"],
-    githubUrl: "https://github.com/devbret/website-internal-links",
-    liveUrl: "https://links.bretbernhoft.com/",
-  },
-  {
-    id: 4,
-    title: "Tech Knowledge Hub",
-    description:
-      "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/aef06f47-887c-453c-aae4-f51c7f7f5d85.png",
-    tags: ["React", "Vite", "TypeScript", "FOSS"],
-    githubUrl: "https://github.com/devbret/tech-knowledge-hub",
-    liveUrl: "https://tkh.bretbernhoft.com/",
-  },
-  {
-    id: 5,
-    title: "Detailed Audio Analyses And Visualizations",
-    description:
-      "Measure the evolution of audio features for sound files. Then visualize the data.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/a84d0d1d-61a8-4052-8994-0ae013b16cd0.png",
-    tags: ["D3", "Python", "JSON", "Librosa"],
-    githubUrl: "https://github.com/devbret/detailed-audio-analysis",
-    liveUrl: "https://daav.bretbernhoft.com/",
-  },
-  {
-    id: 6,
-    title: "TriMet GTFS Data Visualization",
-    description:
-      "Processes GTFS data into a JSON file, which a frontend decodes to animate vehicles on a map.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/d5e82a70-f5fb-4314-89f7-3d169ad45976.png",
-    tags: ["Python", "Leaflet", "JSON"],
-    githubUrl: "https://github.com/devbret/trimet-gtfs-visualization",
-    liveUrl: "https://trimet.bretbernhoft.com/",
-  },
-  {
-    id: 7,
-    title: "FAOSTAT Populations",
-    description:
-      "Transforms CSV data into an interactive visualization to reveal how country populations change over time.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/c22bd4f7-d278-42ef-b10b-79f254065405.png",
-    tags: ["Python", "CSV", "JSON", "FAOSTAT"],
-    githubUrl: "https://github.com/devbret/faostat-populations",
-    liveUrl: "https://populations.bretbernhoft.com/",
-  },
-  {
-    id: 8,
-    title: "Portland Parks Trees",
-    description:
-      "View data about trees in parks from Portland, Oregon as an interactive web-based heatmap.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/9547801e-223a-4179-ab16-0fe5a0b3f76d.png",
-    tags: ["JavaScript", "Leaflet", "Public Domain"],
-    githubUrl: "https://github.com/devbret/portland-parks-trees",
-    liveUrl: "https://trees.bretbernhoft.com/",
-  },
-  {
-    id: 9,
-    title: "C-TRAN Average Wait Times",
-    description:
-      "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/beb13e9c-2b56-4f2b-8e3a-dea0d3cd1d02.png",
-    tags: ["JavaScript", "Python", "Public Domain"],
-    githubUrl: "https://github.com/devbret/c-tran-wait-times",
-    liveUrl: "https://ctran.bretbernhoft.com/",
-  },
-  {
-    id: 10,
-    title: "Character Interactions",
-    description:
-      "Map direct conversations between different characters in a body of text using Python and D3.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/1f62087f-ef61-4cac-b78d-a42f2747f27e.png",
-    tags: ["Python", "JavaScript", "D3", "JSON"],
-    githubUrl: "https://github.com/devbret/character-interactions",
-    liveUrl: "https://neuromancer.bretbernhoft.com/",
-  },
-  {
-    id: 11,
-    title: "Rhyming Words",
-    description:
-      "Analyzes a text file to detect rhymes, builds a network from those relationships and visualizes the resulting structure with D3.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/1772e123-073d-4da9-b1ab-862f6a5253ff.png",
-    tags: ["Python", "JavaScript", "D3", "JSON"],
-    githubUrl: "https://github.com/devbret/networked-rhyming-words",
-    liveUrl: "https://rhymes.bretbernhoft.com/",
-  },
-  {
-    id: 12,
-    title: "Industrialization Paths",
-    description:
-      "Renders an animated D3 bubble chart showing how countries move over time across two economic indicators.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/1dbd2cb2-9a27-4c2a-9d12-c77b51a3e20e.png",
-    tags: ["FAOSTAT", "Python", "D3", "JSON"],
-    githubUrl: "https://github.com/devbret/global-industrialization-paths",
-    liveUrl: "https://global.bretbernhoft.com/",
-  },
-  {
-    id: 13,
-    title: "Music Events Replay Heatmap",
-    description:
-      "A timeline of geocoded music events on an interactive Leaflet map for quickly navigating event volume.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/7d34cf5e-5f3e-4480-a168-1209955b27e2.png",
-    tags: ["Leaflet", "MusicBrainz", "JavaScript"],
-    githubUrl: "https://github.com/devbret/music-events-replay-heatmap",
-    liveUrl: "https://events.bretbernhoft.com/",
-  },
-  {
-    id: 14,
-    title: "AI Chat Interface",
-    description:
-      "A chat interface for holding conversations with different locally deployed AI models.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/45ccc622-d504-4a70-9500-3346049c5e2d.png",
-    tags: ["Python", "JavaScript", "Ollama", "LLM"],
-    githubUrl: "https://github.com/devbret/ai-chat-interface",
-    liveUrl: "",
-  },
-  {
-    id: 15,
-    title: "YouTube Playlists Tracker App",
-    description:
-      "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6663859d-0e07-453b-b904-d8a4eb2baacc.png",
-    tags: ["Flask", "Python", "JavaScript", "D3"],
-    githubUrl: "https://github.com/devbret/youtube-playlists-tracker-app",
-    liveUrl: "",
-  },
-  {
-    id: 16,
-    title: "Browser Automation Experiments",
-    description:
-      "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/ae3971c6-ed8d-4d08-90c0-879edcb15b1a.png",
-    tags: ["Selenium", "Puppeteer", "TypeScript"],
-    githubUrl: "https://github.com/devbret/browser-automation-experiments",
-    liveUrl: "",
-  },
-  {
-    id: 17,
-    title: "Pi-hole Data Measurement Tools",
-    description:
-      "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/7481dd41-3ac9-4d9c-be96-ed25bc34227e.png",
-    tags: ["Raspberry Pi", "Python", "D3", "OPSEC"],
-    githubUrl: "https://github.com/devbret/pihole-data-measurement-tools",
-    liveUrl: "",
-  },
-  {
-    id: 18,
-    title: "MCP9808 Sensor Project",
-    description:
-      "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/40a38b82-aff4-458d-904a-63dad791dd9e.png",
-    tags: ["Raspberry Pi", "Flask", "JavaScript"],
-    githubUrl: "https://github.com/devbret/mcp9808-sensor-project",
-    liveUrl: "",
-  },
-  {
-    id: 19,
-    title: "Homelab Documentation",
-    description:
-      "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/b5950ae8-e3a6-4f62-a51d-4a7f8226bd90.jpg",
-    tags: ["Shell", "Docker", "AI", "Networking"],
-    githubUrl: "https://github.com/devbret/homelab",
-    liveUrl: "",
-  },
-  {
-    id: 20,
-    title: "GeoSpy API Mapping Application",
-    description:
-      "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
-    image:
-      "https://hosting.photobucket.com/images/i/bernhoftbret/geospy-api-mapping-app-histogram-update.png",
-    tags: ["AI", "Python", "D3", "OSINT"],
-    githubUrl: "https://github.com/devbret/geospy-api-mapping",
-    liveUrl: "",
-  },
-  {
-    id: 21,
-    title: "OSINT Keyword Searches",
-    description:
-      "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
-    image:
-      "https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/6ac63d6b-a2e7-46f6-90f7-62c691f47025.png",
-    tags: ["Flask", "JavaScript", "Quantified Self"],
-    githubUrl: "https://github.com/devbret/osint-keyword-searches",
-    liveUrl: "",
-  },
-  {
-    id: 22,
-    title: "Username Availability Checker",
-    description:
-      "Check the availability of a username across twenty popular social media platforms.",
-    image:
-      "https://hosting.photobucket.com/images/i/bernhoftbret/usename-availability-checker-new-dropdown.png",
-    tags: ["Python", "JavaScript", "Social Media"],
-    githubUrl: "https://github.com/devbret/username-availability-checker",
-    liveUrl: "",
-    category: "",
-  },
-];
+const ProjectHoloCanvas = lazy(() => import("./ProjectHoloCanvas"));
 
 const ProjectsSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
   const allTags = useMemo(() => {
@@ -274,8 +32,16 @@ const ProjectsSection = () => {
   }, [selectedTags]);
 
   return (
-    <section id="projects" className="py-20 px-4 cyber-bg relative">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="py-20 px-4 cyber-bg relative"
+    >
       <div className="absolute inset-0 cyber-grid opacity-20 z-0" />
+
+      <Suspense fallback={null}>
+        <ProjectHoloCanvas targetRef={sectionRef} />
+      </Suspense>
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">

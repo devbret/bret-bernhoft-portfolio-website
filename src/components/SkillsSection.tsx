@@ -1,104 +1,22 @@
-import {
-  Code,
-  BrainCircuit,
-  LayoutDashboard,
-  Share2,
-  Workflow,
-  Server,
-} from "lucide-react";
-import type { ElementType } from "react";
+import { lazy, Suspense, useRef } from "react";
+import { skillCategories } from "@/data/skills";
 
-type SkillCategory = {
-  id: string;
-  title: string;
-  icon: ElementType;
-  skills: string[];
-};
-
-const skillCategories: SkillCategory[] = [
-  {
-    id: "languages",
-    title: "Languages",
-    icon: Code,
-    skills: [
-      "JavaScript / TypeScript",
-      "Python",
-      "SQL / MySQL",
-      "HTML5 / CSS3",
-      "Bash",
-      "PHP",
-    ],
-  },
-  {
-    id: "ai",
-    title: "Artificial Intelligence",
-    icon: BrainCircuit,
-    skills: [
-      "Gemma",
-      "Mistral",
-      "Anthropic",
-      "OpenAI",
-      "Copilot",
-      "Perplexity",
-      "Cursor",
-    ],
-  },
-  {
-    id: "lowcode",
-    title: "Low-Code & Deployment",
-    icon: Workflow,
-    skills: [
-      "Quickbase",
-      "AWS",
-      "Zapier",
-      "Notion",
-      "Trello",
-      "Docker",
-      "Portainer",
-      "Kubernetes",
-    ],
-  },
-  {
-    id: "frontend",
-    title: "Frontend & UI",
-    icon: LayoutDashboard,
-    skills: ["React", "Vite", "Tailwind CSS", "D3.js", "Three.js", "AngularJS"],
-  },
-  {
-    id: "backend",
-    title: "Backend & APIs",
-    icon: Share2,
-    skills: [
-      "Node.js / Express",
-      "Flask",
-      "REST APIs",
-      "GraphQL",
-      "Webhooks",
-      "OAuth",
-    ],
-  },
-  {
-    id: "devops",
-    title: "DevOps & Homelab",
-    icon: Server,
-    skills: [
-      "Linux",
-      "Raspberry Pi",
-      "CI/CD",
-      "Git / GitHub",
-      "AWS",
-      "Netlify",
-      "Proxmox",
-      "Pi-hole",
-      "OPNsense",
-    ],
-  },
-];
+const SkillConstellation = lazy(() => import("./SkillConstellation"));
 
 const SkillsSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <section id="skills" className="py-20 px-4 cyber-bg relative">
+    <section
+      ref={sectionRef}
+      id="skills"
+      className="py-20 px-4 cyber-bg relative"
+    >
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
+
+      <Suspense fallback={null}>
+        <SkillConstellation targetRef={sectionRef} />
+      </Suspense>
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
@@ -121,6 +39,7 @@ const SkillsSection = () => {
           {skillCategories.map((category) => (
             <div
               key={category.id}
+              data-skill-category={category.id}
               className="bg-cyber-black/40 border border-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8 relative overflow-hidden transition-all hover:border-cyber-neon/30"
             >
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyber-neon opacity-70"></div>
@@ -138,7 +57,10 @@ const SkillsSection = () => {
               <ul className="flex flex-wrap gap-2.5">
                 {category.skills.map((skill) => (
                   <li key={skill}>
-                    <span className="inline-block px-3 py-1.5 text-sm font-mono rounded-full border border-cyber-neon/30 bg-cyber-black/40 text-white/80 transition-colors hover:border-cyber-neon hover:text-cyber-neon hover:bg-cyber-neon/5">
+                    <span
+                      data-skill={skill}
+                      className="inline-block px-3 py-1.5 text-sm font-mono rounded-full border border-cyber-neon/30 bg-cyber-black/40 text-white/80 transition-colors hover:border-cyber-neon hover:text-cyber-neon hover:bg-cyber-neon/5"
+                    >
                       {skill}
                     </span>
                   </li>
