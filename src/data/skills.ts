@@ -7,17 +7,20 @@ import {
   Server,
 } from "lucide-react";
 import type { ElementType } from "react";
+import { CYBER } from "@/lib/palette";
 
 export type SkillCategory = {
   id: string;
   title: string;
   icon: ElementType;
+  color: number;
   skills: string[];
 };
 
 export const skillCategories: SkillCategory[] = [
   {
     id: "languages",
+    color: CYBER.neon,
     title: "Languages",
     icon: Code,
     skills: [
@@ -31,6 +34,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "ai",
+    color: CYBER.purple,
     title: "Artificial Intelligence",
     icon: BrainCircuit,
     skills: [
@@ -45,6 +49,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "lowcode",
+    color: CYBER.orange,
     title: "Low-Code & Deployment",
     icon: Workflow,
     skills: [
@@ -60,12 +65,14 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "frontend",
+    color: CYBER.pink,
     title: "Frontend & UI",
     icon: LayoutDashboard,
     skills: ["React", "Vite", "Tailwind CSS", "D3.js", "Three.js", "AngularJS"],
   },
   {
     id: "backend",
+    color: CYBER.blue,
     title: "Backend & APIs",
     icon: Share2,
     skills: [
@@ -79,6 +86,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "devops",
+    color: CYBER.brightPurple,
     title: "DevOps & Homelab",
     icon: Server,
     skills: [
