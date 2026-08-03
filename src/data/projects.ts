@@ -35,13 +35,23 @@ export const projects: Project[] = [
     title: "Mapping A Website's Internal Links",
     description:
       "Explore a website's internal links, then visualize those connections as a network graph with analysis using Claude AI.",
-    image: "/projects/website-internal-links.jpg",
+    image: "/projects/mapping-website-internal-links.jpg",
     tags: ["Python", "JavaScript", "D3", "OSINT"],
     githubUrl: "https://github.com/devbret/website-internal-links",
     liveUrl: "https://links.bretbernhoft.com/",
   },
   {
     id: 4,
+    title: "Consumer Price Indices",
+    description:
+      "Interactive data visualization of Consumer Price Indices built using JavaScript and D3.",
+    image: "/projects/faostat-consumer-price-indices.jpg",
+    tags: ["JavaScript", "D3", "FAOSTAT", "Python"],
+    githubUrl: "https://github.com/devbret/faostat-consumer-price-indices",
+    liveUrl: "https://cpi.bretbernhoft.com/",
+  },
+  {
+    id: 5,
     title: "Tech Knowledge Hub",
     description:
       "An evolving collection of Bret Bernhoft's personally curated glossary terms and resource links.",
@@ -51,7 +61,17 @@ export const projects: Project[] = [
     liveUrl: "https://tkh.bretbernhoft.com/",
   },
   {
-    id: 5,
+    id: 6,
+    title: "Neon Run",
+    description:
+      "Built in TypeScript on WebGL2 with no game engine, libraries or asset files.",
+    image: "/projects/neon-run.jpg",
+    tags: ["WebGL2", "TypeScript", "JavaScript"],
+    githubUrl: "https://github.com/devbret/neon-run",
+    liveUrl: "https://neonrun.bretbernhoft.com/",
+  },
+  {
+    id: 7,
     title: "Detailed Audio Analyses And Visualizations",
     description:
       "Measure the evolution of audio features for sound files. Then visualize the data.",
@@ -61,7 +81,17 @@ export const projects: Project[] = [
     liveUrl: "https://daav.bretbernhoft.com/",
   },
   {
-    id: 6,
+    id: 8,
+    title: "Document And Entity Map",
+    description:
+      "Interactive D3 network graph linking documents to the entities mentioned therein.",
+    image: "/projects/document-entity-map.jpg",
+    tags: ["JavaScript", "D3", "PDFs", "OSINT"],
+    githubUrl: "https://github.com/devbret/document-entity-map",
+    liveUrl: "https://entity.bretbernhoft.com/",
+  },
+  {
+    id: 9,
     title: "TriMet GTFS Data Visualization",
     description:
       "Processes GTFS data into a JSON file, which a frontend decodes to animate vehicles on a map.",
@@ -71,7 +101,7 @@ export const projects: Project[] = [
     liveUrl: "https://trimet.bretbernhoft.com/",
   },
   {
-    id: 7,
+    id: 10,
     title: "FAOSTAT Populations",
     description:
       "Transforms CSV data into an interactive visualization to reveal how country populations change over time.",
@@ -81,7 +111,7 @@ export const projects: Project[] = [
     liveUrl: "https://populations.bretbernhoft.com/",
   },
   {
-    id: 8,
+    id: 11,
     title: "Portland Parks Trees",
     description:
       "View data about trees in parks from Portland, Oregon as an interactive web-based heatmap.",
@@ -91,7 +121,7 @@ export const projects: Project[] = [
     liveUrl: "https://trees.bretbernhoft.com/",
   },
   {
-    id: 9,
+    id: 12,
     title: "C-TRAN Average Wait Times",
     description:
       "Average wait times for C-TRAN stops in Vancouver, Washington visualized as a map.",
@@ -101,7 +131,7 @@ export const projects: Project[] = [
     liveUrl: "https://ctran.bretbernhoft.com/",
   },
   {
-    id: 10,
+    id: 13,
     title: "Character Interactions",
     description:
       "Map direct conversations between different characters in a body of text using Python and D3.",
@@ -111,7 +141,7 @@ export const projects: Project[] = [
     liveUrl: "https://neuromancer.bretbernhoft.com/",
   },
   {
-    id: 11,
+    id: 14,
     title: "Rhyming Words",
     description:
       "Analyzes a text file to detect rhymes, builds a network from those relationships and visualizes the resulting structure with D3.",
@@ -121,7 +151,7 @@ export const projects: Project[] = [
     liveUrl: "https://rhymes.bretbernhoft.com/",
   },
   {
-    id: 12,
+    id: 15,
     title: "Industrialization Paths",
     description:
       "Renders an animated D3 bubble chart showing how countries move over time across two economic indicators.",
@@ -131,7 +161,7 @@ export const projects: Project[] = [
     liveUrl: "https://global.bretbernhoft.com/",
   },
   {
-    id: 13,
+    id: 16,
     title: "Music Events Replay Heatmap",
     description:
       "A timeline of geocoded music events on an interactive Leaflet map for quickly navigating event volume.",
@@ -141,7 +171,17 @@ export const projects: Project[] = [
     liveUrl: "https://events.bretbernhoft.com/",
   },
   {
-    id: 14,
+    id: 17,
+    title: "Facial Recognition System",
+    description:
+      "Identifies people in photographs by matching every detected face against reference photos.",
+    image: "/projects/facial-recognition-system.jpg",
+    tags: ["Biometrics", "YuNet", "Python"],
+    githubUrl: "https://github.com/devbret/music-events-replay-heatmap",
+    liveUrl: "",
+  },
+  {
+    id: 18,
     title: "AI Chat Interface",
     description:
       "A chat interface for holding conversations with different locally deployed AI models.",
@@ -151,7 +191,7 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 15,
+    id: 19,
     title: "YouTube Playlists Tracker App",
     description:
       "Catalog your viewing progress with YouTube playlists, organized by user-defined categories, via this app.",
@@ -161,7 +201,7 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 16,
+    id: 20,
     title: "Browser Automation Experiments",
     description:
       "Scripts to test, analyze and interact with websites automatically, helping improve performance and reliability.",
@@ -171,7 +211,7 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 17,
+    id: 21,
     title: "Pi-hole Data Measurement Tools",
     description:
       "A collection of various software tools for measuring DNS queries downloaded from a Pi-hole as a CSV file.",
@@ -181,7 +221,7 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 18,
+    id: 22,
     title: "MCP9808 Sensor Project",
     description:
       "Code for combining a RPi Zero 2 WH with an Adafruit MCP9808 temperature sensor to measure air temperatures.",
@@ -191,7 +231,7 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 19,
+    id: 23,
     title: "Homelab Documentation",
     description:
       "Documentation for a self-hosted Kubernetes homelab running Mistral-7B, with Pi-hole and OPNsense.",
@@ -201,7 +241,7 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 20,
+    id: 24,
     title: "GeoSpy API Mapping Application",
     description:
       "Query the GeoSpy API for images using Python. Then visualize that data with D3.",
@@ -211,7 +251,7 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 21,
+    id: 25,
     title: "OSINT Keyword Searches",
     description:
       "Build and organize your OSINT searches on different platforms, including Google, Reddit, YouTube and Bluesky.",
@@ -221,13 +261,35 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 22,
+    id: 26,
     title: "Username Availability Checker",
     description:
       "Check the availability of a username across twenty popular social media platforms.",
     image: "/projects/username-availability-checker.jpg",
     tags: ["Python", "JavaScript", "Social Media"],
     githubUrl: "https://github.com/devbret/username-availability-checker",
+    liveUrl: "",
+    category: "",
+  },
+  {
+    id: 27,
+    title: "Web Content Finder",
+    description:
+      "Visits each result's landing page, scrapes the readable text and saves it all to an output folder.",
+    image: "/projects/web-content-finder.jpg",
+    tags: ["Claude", "Google", "BeautifulSoup"],
+    githubUrl: "https://github.com/devbret/web-content-finder",
+    liveUrl: "",
+    category: "",
+  },
+  {
+    id: 28,
+    title: "Anthropic News Bot",
+    description:
+      "Explores topics by using Anthropic's Claude model and surfaces the most significant stories in a dashboard.",
+    image: "/projects/anthropic-news-bot.jpg",
+    tags: ["Claude", "NewsAPI", "GNews", "Python"],
+    githubUrl: "https://github.com/devbret/anthropic-news-bot",
     liveUrl: "",
     category: "",
   },
