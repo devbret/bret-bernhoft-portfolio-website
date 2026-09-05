@@ -177,7 +177,7 @@ export const projects: Project[] = [
       "Identifies people in photographs by matching every detected face against reference photos.",
     image: "/projects/facial-recognition-system.jpg",
     tags: ["Biometrics", "YuNet", "Python"],
-    githubUrl: "https://github.com/devbret/music-events-replay-heatmap",
+    githubUrl: "https://github.com/devbret/facial-recognition-system",
     liveUrl: "",
   },
   {
