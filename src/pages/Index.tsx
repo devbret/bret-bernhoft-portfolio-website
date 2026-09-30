@@ -55,19 +55,19 @@ const Index = () => {
       <ContactSection />
       <Footer />
 
-      <div className="fixed top-0 left-0 w-24 h-24 pointer-events-none z-10">
+      <div className="fixed top-16 left-0 w-24 h-24 pointer-events-none z-10 hidden md:block">
         <div className="absolute top-8 left-0 w-16 h-1 bg-cyber-neon"></div>
         <div className="absolute top-0 left-8 w-1 h-16 bg-cyber-neon"></div>
       </div>
-      <div className="fixed top-0 right-0 w-24 h-24 pointer-events-none z-10">
+      <div className="fixed top-16 right-0 w-24 h-24 pointer-events-none z-10 hidden md:block">
         <div className="absolute top-8 right-0 w-16 h-1 bg-cyber-pink"></div>
         <div className="absolute top-0 right-8 w-1 h-16 bg-cyber-pink"></div>
       </div>
-      <div className="fixed bottom-0 left-0 w-24 h-24 pointer-events-none z-10">
+      <div className="fixed bottom-0 left-0 w-24 h-24 pointer-events-none z-10 hidden md:block">
         <div className="absolute bottom-8 left-0 w-16 h-1 bg-cyber-purple"></div>
         <div className="absolute bottom-0 left-8 w-1 h-16 bg-cyber-purple"></div>
       </div>
-      <div className="fixed bottom-0 right-0 w-24 h-24 pointer-events-none z-10">
+      <div className="fixed bottom-0 right-0 w-24 h-24 pointer-events-none z-10 hidden md:block">
         <div className="absolute bottom-8 right-0 w-16 h-1 bg-cyber-orange"></div>
         <div className="absolute bottom-0 right-8 w-1 h-16 bg-cyber-orange"></div>
       </div>

@@ -21,7 +21,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 pt-8 border-t border-white/10 text-sm text-white/60">
           <div className="mb-4 md:mb-0 flex items-center">
             <Code className="w-4 h-4 mr-2" />
-            <span>© {currentYear} Bret Bernhoft. All rights reserved.</span>
+            <span>
+              &copy; {currentYear} Bret Bernhoft. All rights reserved.
+            </span>
           </div>
         </div>
       </div>
