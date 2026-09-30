@@ -46,17 +46,6 @@ const HeroSection = () => {
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
 
-      <div className="absolute inset-0 pointer-events-none z-10">
-        <div
-          className="absolute inset-x-0 h-px bg-cyber-neon/20"
-          style={{
-            top: "50%",
-            boxShadow: "0 0 10px rgba(0, 255, 213, 0.5)",
-            animation: "scanline 10s linear infinite",
-          }}
-        ></div>
-      </div>
-
       <div className="w-full max-w-5xl mx-auto z-20 space-y-6">
         <p className="text-cyber-neon font-mono text-xl md:text-2xl tracking-widest">
           <span className="inline-block w-16 h-[1px] bg-cyber-neon mr-3 align-middle"></span>
@@ -77,22 +66,24 @@ const HeroSection = () => {
           ></span>
         </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 max-[400px]:gap-6 pb-[50px]">
-          <a href="#projects">
-            <Button className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border">
+        <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 max-[400px]:gap-6 pb-[50px]">
+          <Button
+            asChild
+            className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border"
+          >
+            <a href="#projects">
               View Projects
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </a>
+            </a>
+          </Button>
 
-          <a href="#contact">
-            <Button
-              variant="outline"
-              className="relative border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all py-6 px-8"
-            >
-              Contact Me
-            </Button>
-          </a>
+          <Button
+            asChild
+            variant="outline"
+            className="relative border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all py-6 px-8"
+          >
+            <a href="#contact">Contact Me</a>
+          </Button>
         </div>
       </div>
 

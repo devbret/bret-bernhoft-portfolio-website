@@ -101,7 +101,7 @@ function QuoteBlock({
           className="text-white/80 italic"
           {...(sourceUrl ? { cite: sourceUrl } : {})}
         >
-          <p>“{quote}”</p>
+          <p>&ldquo;{quote}&rdquo;</p>
         </blockquote>
       </div>
 
@@ -119,7 +119,7 @@ function QuoteBlock({
             </a>
           )}
           {sourceUrl && dateISO && (
-            <span className="mx-2 text-white/30">•</span>
+            <span className="mx-2 text-white/30">&bull;</span>
           )}
           {dateISO && (
             <time dateTime={dateISO}>
@@ -139,7 +139,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
   return (
     <article
       data-endorsement={t.name}
-      className="h-full bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all relative"
+      className="group h-full bg-white/5 border border-white/10 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all relative"
     >
       <header className="flex items-center gap-4 mb-4">
         <div
@@ -168,7 +168,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
         </div>
       )}
 
-      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 hover:ring-2 ring-cyan-400/40 transition" />
+      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-hover:ring-2 ring-cyan-400/40 transition" />
     </article>
   );
 }

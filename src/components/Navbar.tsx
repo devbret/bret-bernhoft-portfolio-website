@@ -37,61 +37,64 @@ const Navbar = () => {
           <NavLink href="#endorsements">Endorsements</NavLink>
           <NavLink href="#contact">Contact</NavLink>
 
-          <a
-            href="https://drive.google.com/file/d/1ug05pOuWw8h-yiW9DZa75UvNt_blcYLh/view"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-3"
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="ml-3 border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-colors"
           >
-            <Button
-              variant="outline"
-              size="sm"
-              className="border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-colors"
+            <a
+              href="https://drive.google.com/file/d/1ug05pOuWw8h-yiW9DZa75UvNt_blcYLh/view"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download Resume
-            </Button>
-          </a>
+            </a>
+          </Button>
 
           <div className="flex items-center gap-3 ml-3">
-            <a
-              href="https://www.linkedin.com/in/bernhoftbret/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="hover:text-cyber-neon transition-colors"
             >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:text-cyber-neon transition-colors"
+              <a
+                href="https://www.linkedin.com/in/bernhoftbret/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
-              </Button>
-            </a>
+              </a>
+            </Button>
 
-            <a
-              href="https://github.com/devbret"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="hover:text-cyber-neon transition-colors"
             >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:text-cyber-neon transition-colors"
+              <a
+                href="https://github.com/devbret"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
-              </Button>
-            </a>
-            <a href="mailto:contact@bretbernhoft.com" aria-label="Email">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:text-cyber-neon transition-colors"
-              >
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="hover:text-cyber-neon transition-colors"
+            >
+              <a href="mailto:contact@bretbernhoft.com" aria-label="Email">
                 <Mail className="h-5 w-5" />
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </nav>
 
@@ -151,61 +154,64 @@ const Navbar = () => {
             Contact
           </a>
 
-          <a
-            href="https://drive.google.com/file/d/1ug05pOuWw8h-yiW9DZa75UvNt_blcYLh/view"
-            download
-            className="mt-4"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="mt-4 self-start border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-colors"
           >
-            <Button
-              variant="outline"
-              size="sm"
-              className="border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-colors"
+            <a
+              href="https://drive.google.com/file/d/1ug05pOuWw8h-yiW9DZa75UvNt_blcYLh/view"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download Resume
-            </Button>
-          </a>
+            </a>
+          </Button>
 
           <div className="flex items-center gap-3 mt-4">
-            <a
-              href="https://www.linkedin.com/in/bernhoftbret/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="hover:text-cyber-neon transition-colors"
             >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:text-cyber-neon transition-colors"
+              <a
+                href="https://www.linkedin.com/in/bernhoftbret/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
-              </Button>
-            </a>
+              </a>
+            </Button>
 
-            <a
-              href="https://github.com/devbret"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="hover:text-cyber-neon transition-colors"
             >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:text-cyber-neon transition-colors"
+              <a
+                href="https://github.com/devbret"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
-              </Button>
-            </a>
-            <a href="mailto:contact@bretbernhoft.com" aria-label="Email">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="hover:text-cyber-neon transition-colors"
-              >
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="hover:text-cyber-neon transition-colors"
+            >
+              <a href="mailto:contact@bretbernhoft.com" aria-label="Email">
                 <Mail className="h-5 w-5" />
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </nav>
       </div>

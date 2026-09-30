@@ -35,13 +35,13 @@ const ProjectCard = ({
   return (
     <div
       data-holo-src={image}
-      className={`group relative rounded-lg overflow-hidden transition-all duration-500 ${
+      className={`group relative rounded-lg overflow-hidden min-h-64 md:min-h-72 transition-all duration-500 ${
         featured ? "md:col-span-2" : ""
       }`}
     >
       <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 group-focus-within:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
 
-      <div className="relative h-64 md:h-72 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
         <img
           src={image}
           alt={`${title} screenshot`}
@@ -53,7 +53,8 @@ const ProjectCard = ({
 
       <div
         className="
-          absolute inset-0 flex flex-col p-6
+          relative flex flex-col p-6
+          [@media(hover:hover)]:absolute [@media(hover:hover)]:inset-0
           transform-gpu translate-y-6
           group-hover:translate-y-0 group-focus-within:translate-y-0
           [@media(hover:none)]:translate-y-0
@@ -91,7 +92,7 @@ const ProjectCard = ({
 
         <p
           className="
-            text-white/80 mb-4
+            hidden md:block text-white/80 mb-4
             opacity-0 group-hover:opacity-100 group-focus-within:opacity-100
             [@media(hover:none)]:opacity-100
             transform-gpu translate-y-1
