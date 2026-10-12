@@ -8,6 +8,8 @@ import {
 } from "react";
 import { ArrowDown, Cpu, Workflow, Zap, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { useNearViewport } from "@/hooks/useNearViewport";
 
 const HoloPortrait = lazy(() => import("./HoloPortrait"));
 
@@ -89,10 +91,14 @@ function CoreValueCard({
 }
 
 const AboutSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [holoReady, setHoloReady] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const nearViewport = useNearViewport(sectionRef);
 
   return (
     <section
+      ref={sectionRef}
       id="about"
       className="py-20 px-4 cyber-bg relative overflow-hidden"
     >
@@ -109,34 +115,38 @@ const AboutSection = () => {
               Passionate Software Engineer
             </h3>
 
-            <div className="relative mt-8 mb-6 hidden lg:block">
-              <div
-                className={[
-                  "group relative w-80 h-80 rounded-lg overflow-hidden border-2 border-cyber-neon/50 cyber-border",
-                  "bg-black/20 transform-gpu",
-                  "motion-safe:hover:rotate-[1.5deg] motion-safe:hover:translate-x-0.5 motion-safe:hover:-translate-y-0.5",
-                  "transition-all duration-300",
-                  "shadow-[0_10px_30px_rgba(0,0,0,0.25)]",
-                ].join(" ")}
-              >
-                <div className="pointer-events-none absolute -inset-0.5 rounded-lg opacity-0 blur-md transition duration-300 group-hover:opacity-100 bg-gradient-to-br from-cyber-neon/25 to-cyber-pink/25" />
-                <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/20 to-cyber-blue/10" />
-                <img
-                  src={PORTRAIT_SRC}
-                  alt="Engineer Portrait"
-                  className={cn(
-                    "w-full h-full object-cover transition-opacity duration-700",
-                    holoReady && "opacity-0",
-                  )}
-                />
-                <Suspense fallback={null}>
-                  <HoloPortrait
+            {isDesktop && (
+              <div className="relative mt-8 mb-6">
+                <div
+                  className={[
+                    "group relative w-80 h-80 rounded-lg overflow-hidden border-2 border-cyber-neon/50 cyber-border",
+                    "bg-black/20 transform-gpu",
+                    "motion-safe:hover:rotate-[1.5deg] motion-safe:hover:translate-x-0.5 motion-safe:hover:-translate-y-0.5",
+                    "transition-all duration-300",
+                    "shadow-[0_10px_30px_rgba(0,0,0,0.25)]",
+                  ].join(" ")}
+                >
+                  <div className="pointer-events-none absolute -inset-0.5 rounded-lg opacity-0 blur-md transition duration-300 group-hover:opacity-100 bg-gradient-to-br from-cyber-neon/25 to-cyber-pink/25" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/20 to-cyber-blue/10" />
+                  <img
                     src={PORTRAIT_SRC}
-                    onReady={() => setHoloReady(true)}
+                    alt="Engineer Portrait"
+                    className={cn(
+                      "w-full h-full object-cover transition-opacity duration-700",
+                      holoReady && "opacity-0",
+                    )}
                   />
-                </Suspense>
+                  {nearViewport && (
+                    <Suspense fallback={null}>
+                      <HoloPortrait
+                        src={PORTRAIT_SRC}
+                        onReady={() => setHoloReady(true)}
+                      />
+                    </Suspense>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           <div className="lg:col-span-3">
@@ -217,7 +227,7 @@ const AboutSection = () => {
             className="flex flex-col items-center text-white/50 hover:text-cyber-neon transition-colors"
           >
             <span className="text-sm mb-2">View My Projects</span>
-            <ArrowDown className="animate-bounce" />
+            <ArrowDown className="motion-safe:animate-bounce" />
           </a>
         </div>
       </div>

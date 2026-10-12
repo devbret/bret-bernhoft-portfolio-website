@@ -1,12 +1,14 @@
 import { lazy, Suspense, useMemo, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/data/projects";
+import { useNearViewport } from "@/hooks/useNearViewport";
 
 const ProjectHoloCanvas = lazy(() => import("./ProjectHoloCanvas"));
 
 const ProjectsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+  const nearViewport = useNearViewport(sectionRef);
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
@@ -39,9 +41,11 @@ const ProjectsSection = () => {
     >
       <div className="absolute inset-0 cyber-grid opacity-20 z-0" />
 
-      <Suspense fallback={null}>
-        <ProjectHoloCanvas targetRef={sectionRef} />
-      </Suspense>
+      {nearViewport && (
+        <Suspense fallback={null}>
+          <ProjectHoloCanvas targetRef={sectionRef} />
+        </Suspense>
+      )}
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -100,7 +104,6 @@ const ProjectsSection = () => {
                 githubUrl={project.githubUrl}
                 liveUrl={project.liveUrl}
                 tags={project.tags}
-                gradient="to-b"
               />
             ))}
           </div>
