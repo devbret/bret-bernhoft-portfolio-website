@@ -1,10 +1,12 @@
 import { lazy, Suspense, useRef } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useNearViewport } from "@/hooks/useNearViewport";
 
 const ContactGlobe = lazy(() => import("./ContactGlobe"));
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const nearViewport = useNearViewport(sectionRef);
 
   return (
     <section
@@ -14,9 +16,11 @@ const ContactSection = () => {
     >
       <div className="absolute inset-0 cyber-grid opacity-20 z-0"></div>
 
-      <Suspense fallback={null}>
-        <ContactGlobe targetRef={sectionRef} />
-      </Suspense>
+      {nearViewport && (
+        <Suspense fallback={null}>
+          <ContactGlobe targetRef={sectionRef} />
+        </Suspense>
+      )}
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">

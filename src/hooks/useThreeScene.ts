@@ -121,6 +121,7 @@ export function useThreeScene(
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       handle.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
       container.removeChild(renderer.domElement);
     };
   }, [containerRef]);

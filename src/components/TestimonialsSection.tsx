@@ -1,5 +1,6 @@
 import { lazy, Suspense, useRef } from "react";
 import { cyberRgba, TOPIC_COLORS } from "@/lib/palette";
+import { useNearViewport } from "@/hooks/useNearViewport";
 
 const EndorsementEmblems = lazy(() => import("./EndorsementEmblems"));
 
@@ -12,10 +13,7 @@ type Testimonial = {
   name: string;
   role: string;
   quote: string;
-  avatarUrl?: string;
   tag?: string;
-  sourceUrl?: string;
-  dateISO?: string;
 };
 
 const TESTIMONIALS: Testimonial[] = [
@@ -25,7 +23,6 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Principal Front-end Engineer at Knapsack",
     quote:
       "Bret is a very capable engineer with a natural curiosity and wide range of technological interests that inform his problem solving skills. [...] Bret is a considerate and helpful team member who I regard with utmost respect.",
-    avatarUrl: "",
     tag: "Software Engineering",
   },
   {
@@ -34,7 +31,6 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Technical Requirements Analyst @ BAH",
     quote:
       "I highly recommend Bret for any professional opportunity or collaboration. He is incredibly experienced and has a deep understanding of his field, which was evident in the thoughtful advice he gave me even on my personal technical projects.",
-    avatarUrl: "",
     tag: "Cybersecurity",
   },
   {
@@ -43,7 +39,6 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Growth Marketer at LeadDesk & Founder of Hacktoria CTF",
     quote:
       "I had the pleasure of working with Bret on two occasions. First as an early team member of Hacktoria. The other occasion was during my time at DataCrunch, where Bret organized a whole panel of developers to help us test a new application.",
-    avatarUrl: "",
     tag: "Open Source Intelligence",
   },
   {
@@ -52,7 +47,6 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Software Engineer",
     quote:
       "Bret has a real, demonstrated passion for software engineering. [...] Through his publications and commitment to genuine interests in forward-looking technologies like AI and data analytics, it's clear that he'd be a great candidate for a software engineering role in today's market onward.",
-    avatarUrl: "",
     tag: "Software Engineering",
   },
   {
@@ -61,7 +55,6 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Software Engineer",
     quote:
       "Bret is absolutely a gem of a software engineer. He's curious, loves open source, and is an avid proponent of collaboration and maximizing effort on work that matters. Anyone who is currently working with him or works with him in the future would be in GREAT hands",
-    avatarUrl: "",
     tag: "Software Engineering",
   },
   {
@@ -70,22 +63,11 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Cybersecurity Analyst",
     quote:
       "Bret is an excellent communicator and a true professional. He has always been willing to support me on my journey, demonstrating patience, expertise, and a strong commitment to helping both me and the broader tech community.",
-    avatarUrl: "",
     tag: "Cybersecurity",
   },
 ];
 
-function QuoteBlock({
-  quote,
-  sourceUrl,
-  sourceLabel = "LinkedIn",
-  dateISO,
-}: {
-  quote: string;
-  sourceUrl?: string;
-  sourceLabel?: string;
-  dateISO?: string;
-}) {
+function QuoteBlock({ quote }: { quote: string }) {
   return (
     <figure className="relative">
       <div className="flex items-start gap-4">
@@ -97,40 +79,10 @@ function QuoteBlock({
               "linear-gradient(180deg, rgba(34,211,238,0.85) 0%, rgba(168,85,247,0.9) 50%, rgba(250,204,21,0.85) 100%)",
           }}
         />
-        <blockquote
-          className="text-white/80 italic"
-          {...(sourceUrl ? { cite: sourceUrl } : {})}
-        >
+        <blockquote className="text-white/80 italic">
           <p>&ldquo;{quote}&rdquo;</p>
         </blockquote>
       </div>
-
-      {(sourceUrl || dateISO) && (
-        <figcaption className="mt-3 ml-[1.25rem] pl-3 border-l border-white/10 text-sm text-white/70">
-          {sourceUrl && (
-            <a
-              href={sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-cyan-400/50 hover:decoration-cyan-300 underline-offset-2"
-              title={`View on ${sourceLabel}`}
-            >
-              <cite className="not-italic text-white/80">{sourceLabel}</cite>
-            </a>
-          )}
-          {sourceUrl && dateISO && (
-            <span className="mx-2 text-white/30">&bull;</span>
-          )}
-          {dateISO && (
-            <time dateTime={dateISO}>
-              {new Date(dateISO).toLocaleDateString(undefined, {
-                year: "numeric",
-                month: "short",
-              })}
-            </time>
-          )}
-        </figcaption>
-      )}
     </figure>
   );
 }
@@ -158,7 +110,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
         </div>
       </header>
 
-      <QuoteBlock quote={t.quote} sourceUrl={t.sourceUrl} dateISO={t.dateISO} />
+      <QuoteBlock quote={t.quote} />
 
       {t.tag && (
         <div className="mt-4">
@@ -175,6 +127,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
 
 export default function TestimonialsSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const nearViewport = useNearViewport(sectionRef);
 
   return (
     <section
@@ -183,9 +136,11 @@ export default function TestimonialsSection() {
       className="py-20 px-4 cyber-bg relative"
     >
       <div className="absolute inset-0 cyber-grid opacity-20 z-0" />
-      <Suspense fallback={null}>
-        <EndorsementEmblems targetRef={sectionRef} />
-      </Suspense>
+      {nearViewport && (
+        <Suspense fallback={null}>
+          <EndorsementEmblems targetRef={sectionRef} />
+        </Suspense>
+      )}
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>

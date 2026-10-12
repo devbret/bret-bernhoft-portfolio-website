@@ -6,7 +6,6 @@ export type Project = {
   tags: string[];
   githubUrl: string;
   liveUrl: string;
-  category?: string;
 };
 
 export const projects: Project[] = [
@@ -269,7 +268,6 @@ export const projects: Project[] = [
     tags: ["Python", "JavaScript", "Social Media"],
     githubUrl: "https://github.com/devbret/username-availability-checker",
     liveUrl: "",
-    category: "",
   },
   {
     id: 27,
@@ -280,7 +278,6 @@ export const projects: Project[] = [
     tags: ["Claude", "Google", "BeautifulSoup"],
     githubUrl: "https://github.com/devbret/web-content-finder",
     liveUrl: "",
-    category: "",
   },
   {
     id: 28,
@@ -291,6 +288,5 @@ export const projects: Project[] = [
     tags: ["Claude", "NewsAPI", "GNews", "Python"],
     githubUrl: "https://github.com/devbret/anthropic-news-bot",
     liveUrl: "",
-    category: "",
   },
 ];

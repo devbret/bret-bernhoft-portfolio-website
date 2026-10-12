@@ -33,15 +33,6 @@
     --ring: 169 100% 50%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 240 10% 3.9%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 267 83% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 6% 10%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 240 10% 13.9%;
-    --sidebar-ring: 169 100% 50%;
   }
 }
 
@@ -162,10 +153,6 @@
 }
 
 @layer utilities {
-  .cyber-glitch {
-    animation: glitch 2s infinite;
-  }
-
   .cyber-border {
     @apply relative;
   }
@@ -207,43 +194,6 @@
       0 0 5px theme("colors.cyber.purple"),
       0 0 10px theme("colors.cyber.purple"),
       0 0 20px theme("colors.cyber.purple");
-  }
-
-  .neon-pink-text {
-    text-shadow:
-      0 0 5px theme("colors.cyber.pink"),
-      0 0 10px theme("colors.cyber.pink"),
-      0 0 20px theme("colors.cyber.pink");
-  }
-}
-
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
   }
 }
 

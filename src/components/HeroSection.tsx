@@ -2,25 +2,33 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useNearViewport } from "@/hooks/useNearViewport";
 
 const HeroCanvas = lazy(() => import("./HeroCanvas"));
 
+const TAGLINE = "I build Quickbase solutions to save time and drive value.";
+
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
   const [canvasReady, setCanvasReady] = useState(false);
+  const nearViewport = useNearViewport(sectionRef);
 
   useEffect(() => {
     const el = textRef.current;
     if (!el) return;
 
-    const fullText =
-      "I build Quickbase solutions to save time and drive value.";
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.textContent = TAGLINE;
+      return;
+    }
+
     let index = 0;
 
     const interval = setInterval(() => {
-      if (index < fullText.length) {
+      if (index < TAGLINE.length) {
         index++;
-        el.textContent = fullText.slice(0, index);
+        el.textContent = TAGLINE.slice(0, index);
       } else {
         clearInterval(interval);
       }
@@ -31,6 +39,7 @@ const HeroSection = () => {
 
   return (
     <section
+      ref={sectionRef}
       className="min-h-screen relative flex flex-col justify-center items-start px-4 lg:px-24 py-24 overflow-hidden cyber-bg"
       id="home"
     >
@@ -40,9 +49,11 @@ const HeroSection = () => {
           canvasReady ? "opacity-0" : "opacity-20",
         )}
       ></div>
-      <Suspense fallback={null}>
-        <HeroCanvas onReady={() => setCanvasReady(true)} />
-      </Suspense>
+      {nearViewport && (
+        <Suspense fallback={null}>
+          <HeroCanvas onReady={() => setCanvasReady(true)} />
+        </Suspense>
+      )}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyber-black via-cyber-black/90 to-transparent z-10"></div>
 
@@ -60,16 +71,19 @@ const HeroSection = () => {
         </h1>
 
         <div className="mt-8 min-h-[5.25rem] md:min-h-16">
+          <span className="sr-only">{TAGLINE}</span>
           <span
             ref={textRef}
-            className="text-xl md:text-2xl font-mono relative after:absolute after:right-0 after:w-3 after:h-[1em] after:border-r-4 after:border-cyber-neon after:animate-[blink_0.7s_infinite]"
+            aria-hidden="true"
+            className="text-xl md:text-2xl font-mono relative after:absolute after:right-0 after:w-3 after:h-[1em] after:border-r-4 after:border-cyber-neon motion-safe:after:animate-[blink_0.7s_infinite]"
           ></span>
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 max-[400px]:gap-6 pb-[50px]">
           <Button
             asChild
-            className="relative group bg-transparent border border-cyber-neon text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all py-6 px-8 overflow-hidden cyber-border"
+            variant="cyber"
+            className="relative group py-6 px-8 overflow-hidden cyber-border"
           >
             <a href="#projects">
               View Projects

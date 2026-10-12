@@ -1,24 +1,13 @@
 import { Github, ExternalLink } from "lucide-react";
 
-type GradientDir = "to-t" | "to-b" | "to-r" | "to-l";
-
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   githubUrl?: string;
   liveUrl?: string;
-  featured?: boolean;
   tags?: string[];
-  gradient?: GradientDir;
 }
-
-const gradientClassMap: Record<GradientDir, string> = {
-  "to-b": "bg-gradient-to-t from-cyber-black via-cyber-black/80 to-transparent",
-  "to-t": "bg-gradient-to-b from-cyber-black via-cyber-black/80 to-transparent",
-  "to-r": "bg-gradient-to-r from-cyber-black via-cyber-black/80 to-transparent",
-  "to-l": "bg-gradient-to-l from-cyber-black via-cyber-black/80 to-transparent",
-};
 
 const ProjectCard = ({
   title,
@@ -26,18 +15,12 @@ const ProjectCard = ({
   image,
   githubUrl,
   liveUrl,
-  featured = false,
   tags = [],
-  gradient = "to-t",
 }: ProjectCardProps) => {
-  const gradientClass = gradientClassMap[gradient];
-
   return (
     <div
       data-holo-src={image}
-      className={`group relative rounded-lg overflow-hidden min-h-64 md:min-h-72 transition-all duration-500 ${
-        featured ? "md:col-span-2" : ""
-      }`}
+      className="group relative rounded-lg overflow-hidden min-h-64 md:min-h-72 transition-all duration-500"
     >
       <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 group-focus-within:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
 
@@ -48,7 +31,7 @@ const ProjectCard = ({
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover transform-gpu transition-transform duration-700 scale-100 group-hover:scale-105"
         />
-        <div className={`absolute inset-0 ${gradientClass} opacity-80`} />
+        <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-cyber-black/80 to-transparent opacity-80" />
       </div>
 
       <div
