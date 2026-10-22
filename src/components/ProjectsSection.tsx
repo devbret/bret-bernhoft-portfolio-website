@@ -1,13 +1,22 @@
 import { lazy, Suspense, useMemo, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { projects } from "@/data/projects";
+import ProjectStatsModal from "./ProjectStatsModal";
+import { projects, type Project } from "@/data/projects";
+import { projectStats } from "@/data/projectStats";
 import { useNearViewport } from "@/hooks/useNearViewport";
 
 const ProjectHoloCanvas = lazy(() => import("./ProjectHoloCanvas"));
 
+const statsByProjectId = new Map(
+  projectStats
+    .filter((entry) => entry.summary.trim() || entry.stats.length > 0)
+    .map((entry) => [entry.projectId, entry]),
+);
+
 const ProjectsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+  const [statsProject, setStatsProject] = useState<Project | null>(null);
   const nearViewport = useNearViewport(sectionRef);
 
   const allTags = useMemo(() => {
@@ -104,11 +113,27 @@ const ProjectsSection = () => {
                 githubUrl={project.githubUrl}
                 liveUrl={project.liveUrl}
                 tags={project.tags}
+                onShowStats={
+                  statsByProjectId.has(project.id)
+                    ? () => setStatsProject(project)
+                    : undefined
+                }
               />
             ))}
           </div>
         )}
       </div>
+
+      {statsProject && (
+        <ProjectStatsModal
+          title={statsProject.title}
+          summary={statsByProjectId.get(statsProject.id)?.summary ?? ""}
+          stats={statsByProjectId.get(statsProject.id)?.stats ?? []}
+          githubUrl={statsProject.githubUrl}
+          liveUrl={statsProject.liveUrl}
+          onClose={() => setStatsProject(null)}
+        />
+      )}
     </section>
   );
 };

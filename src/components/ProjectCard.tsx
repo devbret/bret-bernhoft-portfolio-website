@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, Info } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -7,6 +7,7 @@ interface ProjectCardProps {
   githubUrl?: string;
   liveUrl?: string;
   tags?: string[];
+  onShowStats?: () => void;
 }
 
 const ProjectCard = ({
@@ -16,6 +17,7 @@ const ProjectCard = ({
   githubUrl,
   liveUrl,
   tags = [],
+  onShowStats,
 }: ProjectCardProps) => {
   return (
     <div
@@ -119,6 +121,16 @@ const ProjectCard = ({
             >
               <ExternalLink className="w-5 h-5" />
             </a>
+          )}
+          {onShowStats && (
+            <button
+              onClick={onShowStats}
+              className="text-white hover:text-cyber-neon transition-colors"
+              aria-label="View Project Stats"
+              aria-haspopup="dialog"
+            >
+              <Info className="w-5 h-5" />
+            </button>
           )}
         </div>
       </div>
