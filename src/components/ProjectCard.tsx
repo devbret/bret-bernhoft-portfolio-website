@@ -24,7 +24,7 @@ const ProjectCard = ({
       data-holo-src={image}
       className="group relative rounded-lg overflow-hidden min-h-64 md:min-h-72 transition-all duration-500"
     >
-      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 group-focus-within:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
+      <div className="absolute inset-0 border border-cyber-neon/0 group-hover:border-cyber-neon/60 group-has-[:focus-visible]:border-cyber-neon/60 transition-colors duration-500 z-20 cyber-border pointer-events-none" />
 
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -41,7 +41,7 @@ const ProjectCard = ({
           relative flex flex-col p-6
           [@media(hover:hover)]:absolute [@media(hover:hover)]:inset-0
           transform-gpu translate-y-6
-          group-hover:translate-y-0 group-focus-within:translate-y-0
+          group-hover:translate-y-0 group-has-[:focus-visible]:translate-y-0
           [@media(hover:none)]:translate-y-0
           transition-transform duration-500 ease-out
         "
@@ -78,10 +78,10 @@ const ProjectCard = ({
         <p
           className="
             hidden md:block text-white/80 mb-4
-            opacity-0 group-hover:opacity-100 group-focus-within:opacity-100
+            opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100
             [@media(hover:none)]:opacity-100
             transform-gpu translate-y-1
-            group-hover:translate-y-0 group-focus-within:translate-y-0
+            group-hover:translate-y-0 group-has-[:focus-visible]:translate-y-0
             [@media(hover:none)]:translate-y-0
             transition-all duration-500 ease-out
           "
@@ -92,10 +92,10 @@ const ProjectCard = ({
         <div
           className="
             flex gap-4 items-center
-            opacity-0 group-hover:opacity-100 group-focus-within:opacity-100
+            opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100
             [@media(hover:none)]:opacity-100
             transform-gpu translate-y-1
-            group-hover:translate-y-0 group-focus-within:translate-y-0
+            group-hover:translate-y-0 group-has-[:focus-visible]:translate-y-0
             [@media(hover:none)]:translate-y-0
             transition-all duration-500 ease-out delay-100
           "
