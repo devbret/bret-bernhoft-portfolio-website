@@ -39,7 +39,7 @@ const ProjectCard = ({
       <div
         className="
           relative flex flex-col p-6
-          [@media(hover:hover)]:absolute [@media(hover:hover)]:inset-0
+          md:[@media(hover:hover)]:absolute md:[@media(hover:hover)]:inset-0
           transform-gpu translate-y-6
           group-hover:translate-y-0 group-has-[:focus-visible]:translate-y-0
           [@media(hover:none)]:translate-y-0
@@ -77,7 +77,7 @@ const ProjectCard = ({
 
         <p
           className="
-            hidden md:block text-white/80 mb-4
+            line-clamp-4 md:line-clamp-none text-white/80 mb-4
             opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100
             [@media(hover:none)]:opacity-100
             transform-gpu translate-y-1
