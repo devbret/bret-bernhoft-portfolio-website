@@ -8,6 +8,9 @@ export function delegateHover(
     const el = (e.target as Element).closest?.(selector) as HTMLElement | null;
     if (el) onEnter(el);
   };
+  const handleFocusIn = (e: Event) => {
+    if ((e.target as Element).matches?.(":focus-visible")) handleEnter(e);
+  };
   const handleLeave = (e: Event) => {
     const el = (e.target as Element).closest?.(selector) as HTMLElement | null;
     if (!el) return;
@@ -17,12 +20,12 @@ export function delegateHover(
   };
   root.addEventListener("pointerover", handleEnter);
   root.addEventListener("pointerout", handleLeave);
-  root.addEventListener("focusin", handleEnter);
+  root.addEventListener("focusin", handleFocusIn);
   root.addEventListener("focusout", handleLeave);
   return () => {
     root.removeEventListener("pointerover", handleEnter);
     root.removeEventListener("pointerout", handleLeave);
-    root.removeEventListener("focusin", handleEnter);
+    root.removeEventListener("focusin", handleFocusIn);
     root.removeEventListener("focusout", handleLeave);
   };
 }
