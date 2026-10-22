@@ -49,6 +49,10 @@
   html {
     @apply scroll-smooth;
   }
+
+  html:has(dialog[open]) {
+    @apply overflow-hidden;
+  }
 }
 
 @layer components {
