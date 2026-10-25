@@ -1,6 +1,6 @@
 # Bret Bernhoft's Portfolio Website
 
-![Screenshot from the top of the website.](https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/7d3e4b88-fa95-482f-be66-149c12b2a2b8.png)
+![Screenshot from the top of the website.](https://hosting.photobucket.com/bbcfb0d4-be20-44a0-94dc-65bff8947cf2/2749110d-1a60-4c80-9e88-e0eb70fd1196.png)
 
 The professional portfolio of Bret Bernhoft, a software engineer who builds secure, scalable Quickbase applications, cloud automations and data-driven web experiences.
 
