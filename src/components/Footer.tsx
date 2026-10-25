@@ -12,8 +12,7 @@ const Footer = () => {
               Bret<span className="text-cyber-neon"> Bernhoft</span>
             </a>
             <p className="text-white/60 text-sm mt-2">
-              Empowering businesses by automating workflows and scaling
-              operations.
+              Empowering businesses by automating workflows with Python and AI
             </p>
           </div>
         </div>

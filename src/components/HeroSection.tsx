@@ -6,7 +6,7 @@ import { useNearViewport } from "@/hooks/useNearViewport";
 
 const HeroCanvas = lazy(() => import("./HeroCanvas"));
 
-const TAGLINE = "I build Quickbase solutions to save time and drive value.";
+const TAGLINE = "I build intelligent automations to save time and drive value.";
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -66,7 +66,7 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-4 leading-tight">
           <span className="block">Empowering businesses</span>
           <span className="text-cyber-purple neon-purple-text">
-            by automating workflows and scaling operations
+            by automating workflows with Python and AI
           </span>
         </h1>
 
