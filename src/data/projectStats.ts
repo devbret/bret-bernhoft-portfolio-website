@@ -24,8 +24,16 @@ export const projectStats: ProjectStats[] = [
   },
   {
     projectId: 2,
-    summary: "",
-    stats: [],
+    summary: `This project is a fictional corporate website set in a cyberpunk universe, built to feel like a real company's public-facing presence. Using Three.js as a core visual layer, the site leans into neon-lit, high-tech atmosphere with interactive 3D elements.
+    
+    Beyond the aesthetic, the site is a playground for experimenting with production-level web techniques in a narrative wrapper. Inspired by Neuromancer, the project treats worldbuilding as a design constraint, pushing every component to reinforce the corporate mythos and create a convincing "real fake" product.
+    `,
+    stats: [
+      { label: "Lines Of Code", value: "3,700" },
+      { label: "Started", value: "December 5th, 2025" },
+      { label: "Primary Language", value: "TypeScript" },
+      { label: "License Information", value: "MIT License" },
+    ],
   },
   {
     projectId: 3,
