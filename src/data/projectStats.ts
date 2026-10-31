@@ -26,8 +26,7 @@ export const projectStats: ProjectStats[] = [
     projectId: 2,
     summary: `This project is a fictional corporate website set in a cyberpunk universe, built to feel like a real company's public-facing presence. Using Three.js as a core visual layer, the site leans into neon-lit, high-tech atmosphere with interactive 3D elements.
     
-    Beyond the aesthetic, the site is a playground for experimenting with production-level web techniques in a narrative wrapper. Inspired by Neuromancer, the project treats worldbuilding as a design constraint, pushing every component to reinforce the corporate mythos and create a convincing "real fake" product.
-    `,
+    Beyond the aesthetic, the site is a playground for experimenting with production-level web techniques in a narrative wrapper. Inspired by Neuromancer, the project treats worldbuilding as a design constraint, pushing every component to reinforce the corporate mythos and create a convincing "real fake" product.`,
     stats: [
       { label: "Lines Of Code", value: "10,900" },
       { label: "Started", value: "December 5th, 2025" },
@@ -37,8 +36,15 @@ export const projectStats: ProjectStats[] = [
   },
   {
     projectId: 3,
-    summary: "",
-    stats: [],
+    summary: `The Python crawler in app.py begins with a chosen website, visits up to a user-defined number of internal pages and extracts details about accessibility, performance, security, links and more. It then saves the generated site map and audit data to links.json before launching a Flask server that hosts the frontend and the analysis API.
+    
+    On the frontend, main.js loads links.json and renders the crawled website as a D3 network graph, with pages represented as nodes and internal links shown as connections. The Flask backend in flask_server.py provides an API for analyzing selected pages, while anthropic_api.py sends each page's structured crawl data to Claude for a review of SEO, accessibility and suggested improvements.`,
+    stats: [
+      { label: "Lines Of Code", value: "5,150" },
+      { label: "Started", value: "April 30th, 2024" },
+      { label: "Primary Language", value: "JavaScript" },
+      { label: "License Information", value: "MIT License" },
+    ],
   },
   {
     projectId: 4,
